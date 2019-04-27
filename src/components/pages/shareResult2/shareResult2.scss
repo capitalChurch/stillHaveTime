@@ -1,0 +1,18 @@
+@import "../../../theme";
+
+.shareResult2{
+  .bodyLayout{
+    flex-direction: column;
+    
+    .body{
+      display: flex;
+      
+    }
+    .buttonBar>*{
+      font-family: $familySecundary;
+      background: $primaryColor;
+      margin: 0 16px;
+      padding: 4px 16px;
+    }
+  }
+}
