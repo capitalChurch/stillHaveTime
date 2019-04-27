@@ -15,6 +15,11 @@ export default class LandingPage extends Component{
                     <Square/>
                 </div>
                 <BackButton/>
+                <div className="resultBody">
+                    <h1>Anna</h1>
+                    <h1 className="ligature">E</h1>
+                    <h1>João.</h1>
+                </div>
                 <div className="footer">
                     <Logo />
                 </div>
