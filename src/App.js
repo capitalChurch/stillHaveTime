@@ -3,13 +3,15 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import './App.scss';
 
 import Result from "./components/pages/result";
-import WhatIfJesusComeBack from "./components/pages/backOfJesus"
+import WhatIfJesusComeBack from "./components/pages/backOfJesus";
+import Result2 from "./components/pages/result2";
 
 function App() {
   return (
       <Router>
         <Route exact path="/" component={Result}/>
         <Route path="/voltaJesus" component={WhatIfJesusComeBack} />
+        <Route path="/result2" component={Result2}/>
       </Router>
   );
 }

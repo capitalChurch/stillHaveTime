@@ -1,0 +1,40 @@
+@import "../../../theme";
+
+.result2{
+  .bodyLayout{
+    flex-direction: column;
+    align-items: center;
+    
+    p{
+      font-family: acumin-pro, sans-serif;
+      font-style: normal;
+      font-weight: 900;
+      font-size: $h3FontSize;
+      line-height: $h3FontSize;
+      letter-spacing: -1px;
+    }
+    
+    .resultBar{
+      margin: 8px 0;
+      padding: 8px 32px;
+      background: $accentColor;
+      
+      span{
+        $sizeFont: 16px;
+        font-size: $h1FontSize - $sizeFont;
+        vertical-align: top;
+        
+        &:not(:last-child)::after{
+          content: "|";
+          vertical-align: top;
+          color: white;
+          padding: 24px;
+        }
+      }
+    }
+    
+    >*{
+      padding: 0 8px;
+    }
+  }
+}
