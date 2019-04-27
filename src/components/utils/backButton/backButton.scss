@@ -1,0 +1,10 @@
+@import "../../../theme";
+
+.backButton{
+  .arrowBack{
+    height: 40px;
+    .cls-1{
+      fill: $accentColor;
+    }
+  }
+}

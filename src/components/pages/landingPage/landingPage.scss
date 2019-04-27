@@ -1,0 +1,11 @@
+@import "../../../theme";
+
+.resultado{
+  .footer{
+    display: flex;
+    justify-content: flex-end;
+    .logo{
+      height: 25px;
+    }
+  }
+}
