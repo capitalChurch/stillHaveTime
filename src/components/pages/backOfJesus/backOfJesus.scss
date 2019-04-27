@@ -1,0 +1,15 @@
+@import "../../../theme";
+
+.backOfJesus{
+  .bodyLayout{
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    
+    span{
+      $fontSize: 15px;
+      font-size: $h1FontSize - $fontSize;
+      line-height: $h1FontSize - $fontSize;
+    }
+  }
+}
