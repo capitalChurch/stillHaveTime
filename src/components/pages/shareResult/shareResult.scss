@@ -1,0 +1,30 @@
+@import "../../../theme";
+
+.shareResult{
+  .bodyLayout{
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    
+    p{
+      font-size: ($h1FontSize * 1.4);
+      line-height: ($h1FontSize * 1.2);
+    }
+    
+    .label{
+      font-family: 'acumin-pro-condensed';
+      text-transform: uppercase;
+      
+      font-weight: 900;
+      font-size: 24px;
+      line-height: 24px;
+      vertical-align: middle;
+      
+      margin: 16px 0;
+      padding: 8px 16px;
+      
+      color: $accentColor;
+      background: $darkPrimaryColor;
+    }
+  }
+}
