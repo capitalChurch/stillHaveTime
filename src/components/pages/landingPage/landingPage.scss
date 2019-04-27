@@ -1,11 +1,22 @@
 @import "../../../theme";
 
-.resultado{
-  .footer{
+.resultado{    
+  $sizePadding: 56px;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  height: calc(100% - #{$sizePadding * 2});
+  padding: $sizePadding;
+  
+  
+  >*{
     display: flex;
+    justify-content: space-between;
+  }
+  
+  .footer{
     justify-content: flex-end;
-    .logo{
-      height: 25px;
-    }
   }
 }

@@ -1,6 +1,10 @@
 @import "../../../theme";
 
-.logo path{
-  fill: $primaryColor;
+.logo {
+  height: 25px;
+
+  path {
+    fill: $primaryColor;
+  }
 }
   

@@ -13,45 +13,72 @@ code {
     monospace;
 }
 
+//
+//@font-face {
+//  font-family: 'DonJose Bigote';
+//  src: url('/src/assets/fonts/donJose/DonJose_Bigote.woff2') format('woff2'),
+//  url('/src/assets/fonts/donJose/DonJose_Bigote.woff') format('woff');
+//  font-weight: normal;
+//  font-style: normal;
+//}
+//
+//@font-face {
+//  font-family: 'DonJose Raices';
+//  src: url('./assets/fonts/donJose/DonJos_Raices.woff2') format('woff2'),
+//  url('./assets/fonts/donJose/DonJos_Raices.woff') format('woff');
+//  font-weight: 900;
+//  font-style: normal;
+//}
+//
+//@font-face {
+//  font-family: 'DonJose Black';
+//  src: url('./assets/fonts/donJose/DonJose_Black.woff2') format('woff2'),
+//  url('./assets/fonts/donJose/DonJose_Black.woff') format('woff');
+//  font-weight: 900;
+//  font-style: normal;
+//}
+//
+//@font-face {
+//  font-family: 'DonJose Trayecto';
+//  src: url('./assets/fonts/donJose/DonJos_Trayecto.woff2') format('woff2'),
+//  url('./assets/fonts/donJose/DonJos_Trayecto.woff') format('woff');
+//  font-weight: 900;
+//  font-style: normal;
+//}
+//
+//@font-face {
+//  font-family: 'DonJose Textil';
+//  src: url('./assets/fonts/donJose/DonJose_Textil.woff2') format('woff2'),
+//  url('./assets/fonts/donJose/DonJose_Textil.woff') format('woff');
+//  font-weight: 900;
+//  font-style: normal;
+//}
 
 @font-face {
-  font-family: 'DonJose Bigote';
-  src: url('/src/assets/fonts/donJose/DonJose_Bigote.woff2') format('woff2'),
-  url('/src/assets/fonts/donJose/DonJose_Bigote.woff') format('woff');
+  font-family: 'Acumin Pro';
+  src: url('./assets/fonts/acumin/Acumin-RPro.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
+//
+//@font-face {
+//  font-family: 'Acumin Pro Italic';
+//  src: url('./assets/fonts/acumin/Acumin-ItPro.woff') format('woff');
+//  font-weight: normal;
+//  font-style: normal;
+//}
+//
 @font-face {
-  font-family: 'DonJose Raices';
-  src: url('./assets/fonts/donJose/DonJos_Raices.woff2') format('woff2'),
-  url('./assets/fonts/donJose/DonJos_Raices.woff') format('woff');
-  font-weight: 900;
+  font-family: 'Acumin Pro Bold';
+  src: url('./assets/fonts/acumin/Acumin-BdPro.woff') format('woff');
+  font-weight: normal;
   font-style: normal;
 }
-
-@font-face {
-  font-family: 'DonJose Black';
-  src: url('./assets/fonts/donJose/DonJose_Black.woff2') format('woff2'),
-  url('./assets/fonts/donJose/DonJose_Black.woff') format('woff');
-  font-weight: 900;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'DonJose Trayecto';
-  src: url('./assets/fonts/donJose/DonJos_Trayecto.woff2') format('woff2'),
-  url('./assets/fonts/donJose/DonJos_Trayecto.woff') format('woff');
-  font-weight: 900;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'DonJose Textil';
-  src: url('./assets/fonts/donJose/DonJose_Textil.woff2') format('woff2'),
-  url('./assets/fonts/donJose/DonJose_Textil.woff') format('woff');
-  font-weight: 900;
-  font-style: normal;
-}
-
-
+//
+//@font-face {
+//  font-family: 'Acumin Pro Bold Italic';
+//  src: url('./assets/fonts/acumin/Acumin-BdItPro.woff') format('woff');
+//  font-weight: normal;
+//  font-style: normal;
+//}

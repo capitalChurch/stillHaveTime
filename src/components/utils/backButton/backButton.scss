@@ -1,10 +1,40 @@
 @import "../../../theme";
 
-.backButton{
-  .arrowBack{
-    height: 40px;
-    .cls-1{
-      fill: $accentColor;
+.wrapperBackButton{
+  position: absolute;
+  top: 50%;
+  left: 24px;
+  transform: translateY(-50%);
+  
+  .backButton{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    
+    >*{
+      padding: 0 24px;
+    }
+    
+    .text{
+      transform: rotateZ(-90deg) translateY(-20px) translateX(-26px) scaleX(1.1);
+      span{
+        text-transform: uppercase;
+        color: $primaryColor;
+        font-family: "Acumin Pro Bold";
+        
+      }
+    }
+    
+    .icon{
+      .arrowBack{
+        height: 25px;
+        transform: rotate(90deg);
+    
+        .cls-1{
+          fill: $accentColor;
+        }
+      }
     }
   }
+
 }

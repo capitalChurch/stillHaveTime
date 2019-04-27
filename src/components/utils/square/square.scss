@@ -1,6 +1,16 @@
+@import "../../../theme";
+
 .square{
   $sizeSquare: 15px;
   
   height: $sizeSquare;
   width: $sizeSquare;
+
+  &.accent{
+    background: $accentColor;
+  }
+  
+  &.primary{
+    background: $primaryColor;
+  }
 }

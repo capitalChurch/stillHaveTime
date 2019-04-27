@@ -5,8 +5,15 @@ import { ReactComponent as Arrow} from "../../../assets/images/arrow.svg";
 
 export default function(props){
     return (
-        <div className="backButton">
-            <Arrow className="arrowBack"/>
+        <div className="wrapperBackButton">
+            <div className="backButton">
+                <div className="icon">
+                    <Arrow className="arrowBack"/>
+                </div>
+                <div className="text">
+                    <span>voltar</span>
+                </div>
+            </div>
         </div>
     )
 }
