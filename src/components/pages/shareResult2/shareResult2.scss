@@ -3,16 +3,62 @@
 .shareResult2{
   .bodyLayout{
     flex-direction: column;
-    
+    align-self: center;
+    width: 70vw;
+
+
     .body{
       display: flex;
-      
+
+      >*{
+        margin: 0 24px;
+      }
+      .text{
+        display: flex;
+        flex-direction: column;
+        width: 35vw;
+        
+        .title{
+          display: block;
+        }
+        
+        .bodyText{
+          margin: 16px 0;
+          font-family: $familySecundary;
+          color: black;
+          font-size: $normalFontSize;
+          line-height: ($normalFontSize * 1.6);
+        }
+      }
+      .score{
+        background: $accentColor;
+        margin: 16px 0;
+        padding: 8px 16px;
+        align-self: center;
+        >*{
+          display: block;
+          white-space: nowrap;
+          padding: 4px;
+        }
+      }
     }
+    
     .buttonBar>*{
       font-family: $familySecundary;
+      font-size: $h5FontSize;
+      font-weight: 900;
+      vertical-align: bottom;
+      text-transform: uppercase;
       background: $primaryColor;
+      
+      color: white;
       margin: 0 16px;
-      padding: 4px 16px;
+      padding: 8px 16px;
+
+      cursor: pointer;
+      &:hover{
+        background: $darkPrimaryColor;
+      }
     }
   }
 }
