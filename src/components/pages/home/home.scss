@@ -1,0 +1,106 @@
+@import "../../../theme";
+
+.home{
+  $heightLayer: 75vh;
+  
+  &::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    
+    background-image: url("../../../assets/images/background/home_bg.png");
+    background-size: cover;
+    filter: contrast(1.5) brightness(.6);    
+  }
+  
+  .gatinho{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  
+  .gatinho::after{
+    content: "";
+    height: $heightLayer;
+    width: 100vw;
+    opacity: .45;
+    background-color: $backgroundPrimaryColor;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .bodyLayout{
+    z-index: 3;
+
+    height: 72vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: flex-end;
+    
+    .information{
+      z-index: 2;
+      
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+      height: calc(#{$heightLayer} - #{$heightLogoChurch} - #{$paddingLayout});
+      
+      >*{
+        width: 50%;
+      }
+      
+      .text{
+        
+      }
+      
+      .logo {
+        text-align: center;
+
+        svg {
+          width: 70%;
+          transform: translateY(-50%);
+        }
+      }
+    }
+    
+    .moreInfo{
+      z-index: 2;
+      align-self: center;
+      transform: translateX(-50%);
+      cursor: pointer;
+
+      $sizeButton: 24px;
+      
+      .label{
+        text-transform: uppercase;
+        padding: 2px 20px 4px 20px;
+        background: $darkPrimaryColor;
+        color: $accentColor;
+        font-family: $familyThird;
+        vertical-align: middle;
+        font-size: $sizeButton;
+      }
+      .arrow {
+        background: $accentColor;
+        padding: 4px 8px 11px 8px;
+        
+        svg {
+          height: $sizeButton;
+          vertical-align: middle;
+
+          polygon {
+            fill: $darkPrimaryColor;
+          }
+        }
+      }
+    }
+  }
+}

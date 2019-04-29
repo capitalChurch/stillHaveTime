@@ -3,8 +3,12 @@
 .logo {
   height: 25px;
 
-  path {
+  &.blue path {
     fill: $primaryColor;
+  }
+  
+  &.white path {
+    fill: white;
   }
 }
   

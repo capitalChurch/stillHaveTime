@@ -1,6 +1,18 @@
 @import "../../../theme";
 
-.logoChurch path{
-  fill: $primaryColor;
-}
+.logoChurch{
+  svg{
+    height: $heightLogoChurch;
+  }
   
+  &.blue{
+    path{
+      fill: $primaryColor;
+    }
+  }
+  &.white{
+    path{
+      fill: white;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+@import "../../../theme";
+
+.basicLayout{
+  $sizePadding: $paddingLayout;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  height: calc(100% - #{$sizePadding * 2});
+  padding: $sizePadding;
+
+
+  >*{
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .topBar{
+    z-index: 4;
+  }
+}
