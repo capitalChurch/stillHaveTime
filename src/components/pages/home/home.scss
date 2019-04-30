@@ -48,8 +48,6 @@
       z-index: 2;
       
       display: flex;
-      justify-content: center;
-      align-items: center;
       
       height: calc(#{$heightLayer} - #{$heightLogoChurch} - #{$paddingLayout});
       
@@ -58,7 +56,35 @@
       }
       
       .text{
+        font-family: $familySecundary;
+        font-size: $h3FontSize;
+        color: white;
+        font-weight: 900;
+
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
         
+        p{
+          margin: 0;
+        }
+        
+        .actionButton{
+          font-size: $h4FontSize;
+          padding: 8px 16px;
+          text-transform: uppercase;
+          color: $darkPrimaryColor;
+          font-weight: bold;
+          background: $accentColor;
+          text-align: center;
+          font-family: $familyThird;
+          cursor: pointer;
+          
+          &:hover{
+            background: $accentLightColor;
+          }
+        }
       }
       
       .logo {
@@ -66,7 +92,8 @@
 
         svg {
           width: 70%;
-          transform: translateY(-50%);
+          
+          transform: translateY(50%);
         }
       }
     }
@@ -78,6 +105,16 @@
       cursor: pointer;
 
       $sizeButton: 24px;
+
+      &:hover{
+        .label {
+          background-color: $hoverDarkPrimaryColor;
+        }
+        .arrow{
+          background: $accentLightColor;
+          color: $hoverDarkPrimaryColor;
+        }
+      }
       
       .label{
         text-transform: uppercase;
@@ -88,9 +125,11 @@
         vertical-align: middle;
         font-size: $sizeButton;
       }
+      
       .arrow {
         background: $accentColor;
-        padding: 4px 8px 11px 8px;
+        padding: 5px 8px 11px 8px;
+        
         
         svg {
           height: $sizeButton;

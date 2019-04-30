@@ -13,11 +13,24 @@ code {
   monospace;
 }
 
-
 @font-face {
   font-family: 'DonoJose';
   src: url('./assets/fonts/donJose/DonJose_Black.otf') format('opentype');
   font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'trebuchet';
+  src: url('./assets/fonts/trebuchet/Trebuchet MS Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'trebuchet';
+  src: url('./assets/fonts/trebuchet/Trebuchet MS.ttf') format('truetype');
+  font-weight: 500;
   font-style: normal;
 }
 
