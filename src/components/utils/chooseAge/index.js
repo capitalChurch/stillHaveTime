@@ -13,13 +13,14 @@ export default class ChooseAge extends React.Component{
     
     render = () => {
         const items = Array.from({length: 10}, (x, i) => i);
+        const style = `${this.props.color} arrow`;
         return(
             <div className="chooseAge">
-                <Arrow className="arrow arrowLeft" onClick={() => this.props.changeAge(this.props.value-1)}/>
+                <Arrow className={`${style} arrowLeft`} onClick={() => this.props.changeAge(this.props.value-1)}/>
                 <div className="barDates">
                     {items.map(this.renderItem)}
                 </div>
-                <Arrow className="arrow arrowRight" onClick={() => this.props.changeAge(this.props.value+1)}/>
+                <Arrow className={`${style} arrowRight`} onClick={() => this.props.changeAge(this.props.value+1)}/>
             </div>
         )
     }

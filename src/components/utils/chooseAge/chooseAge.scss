@@ -20,6 +20,20 @@
     polygon{
       fill: $darkPrimaryColor;
     }
+
+    &.blue{
+      background: $primaryColor;
+      polygon{
+        fill: white;
+      }
+      
+      &:hover{
+        background: $darkPrimaryColor;
+        polygon{
+          fill: lightgray;
+        }
+      }
+    }
     
     &.arrowLeft{
       transform: rotate(90deg) translateY(4px) translateX(-5px);
