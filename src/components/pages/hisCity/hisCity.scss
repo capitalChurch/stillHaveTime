@@ -1,6 +1,6 @@
 @import "../../../theme";
 
-.yourCity {
+.hisCity{
   .bodyLayout .bodyLayoutPicture {
     width: calc(100vw - (#{$paddingLayout} * 2));
 
@@ -21,9 +21,13 @@
       }
 
       font-family: $familySecundary;
+      
+      .title{
+        color: white
+      }
 
       .item {
-        color: $accentColor;
+        color: $primaryColor;
         font-size: $h3FontSize;
         line-height: 50px;
         padding-top: 16px;
@@ -35,7 +39,7 @@
       flex-direction: column;
       align-items: center;
       padding-left: 0;
-      
+
       > * {
         padding: 8px 0;
       }

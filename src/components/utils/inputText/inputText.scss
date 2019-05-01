@@ -12,4 +12,9 @@
     width: 420px;
     transform: translateY(80%);
   }
+  
+  &.blue input[type=text]{
+    background: $primaryColor;
+    color: white;
+  }
 }

@@ -14,6 +14,7 @@ import Info from "./components/pages/info";
 import YourAge from "./components/pages/yourAge";
 import YourCity from "./components/pages/yourCity";
 import HisAge from "./components/pages/hisAge";
+import HisCity from "./components/pages/hisCity";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
         <Route path="/yourAge" component={YourAge} />
         <Route path="/yourCity" component={YourCity} />
         <Route path="/hisAge" component={HisAge}/>
+        <Route path="/hisCity" component={HisCity}/>
       </Router>
   );
 }
