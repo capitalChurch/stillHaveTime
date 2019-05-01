@@ -1,0 +1,15 @@
+@import "../../../theme";
+
+.inputText{
+
+  input[type=text]{
+    border: none;
+    background: $accentColor;
+    color: $darkPrimaryColor;
+    font-family: $familySecundary;
+    font-size: $h3FontSize;
+    padding: 8px 16px;
+    width: 420px;
+    transform: translateY(80%);
+  }
+}

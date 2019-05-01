@@ -1,0 +1,13 @@
+@import "../../../theme";
+
+.info .bodyLayout .bodyLayoutPicture p{
+  
+  margin: 0;
+  color: $accentColor;
+  transform: translateY(10%);
+  text-align: center;
+  
+  span.accent{
+    color: white;
+  }
+}

@@ -1,0 +1,64 @@
+@import "../../../theme";
+
+.chooseAge{
+  height: 40px;
+  display: flex;
+  
+  .arrow{
+    height: 36px;
+    background: $accentColor;
+    padding: 7px;
+    cursor: pointer;
+    
+    &:hover{
+      background: $accentLightColor;
+      polygon{
+        fill: $hoverDarkPrimaryColor;
+      }
+    }
+    
+    polygon{
+      fill: $darkPrimaryColor;
+    }
+    
+    &.arrowLeft{
+      transform: rotate(90deg) translateY(4px) translateX(-5px);
+    }
+    
+    &.arrowRight{
+      transform: rotate(-90deg) translateY(4px) translateX(5px);
+    }
+  }
+  
+  .barDates{
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6px;
+    
+    span{
+      margin: 0 3px;
+      width: 12px;
+      cursor: pointer;
+      
+      $heightBlock: 12px;
+      
+      &:not(.active){
+        height: $heightBlock;
+        background: $darkPrimaryColor;
+
+        &:hover{
+          background: $hoverDarkPrimaryColor;
+          transform: scale(1.1);
+        }
+      }
+      
+      &.active{
+        height: $heightBlock * 2;
+        background: $accentColor;
+        cursor: default;
+      }
+    }
+  }
+}

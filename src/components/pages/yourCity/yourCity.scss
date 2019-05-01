@@ -1,0 +1,50 @@
+@import "../../../theme";
+
+.yourCity {
+  .bodyLayout .bodyLayoutPicture {
+    width: calc(100vw - (#{$paddingLayout} * 2));
+
+    padding: 0;
+
+    display: flex;
+    align-self: center;
+
+
+    > * {
+      width: 50%;
+      padding: 0 90px;
+    }
+
+    .firstColumn {
+      > * {
+        display: block;
+      }
+
+      font-family: $familySecundary;
+
+      .item {
+        color: $accentColor;
+        font-size: $h3FontSize;
+        line-height: 50px;
+        padding-top: 16px;
+      }
+    }
+
+    .secondColumn {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-left: 0;
+      
+      .age {
+        font-size: $h1FontSize * 2;
+        line-height: $h1FontSize * 2;
+        color: $accentColor;
+      }
+
+      > * {
+        padding: 8px 0;
+      }
+    }
+  }
+}

@@ -10,18 +10,24 @@ import ShareResult2 from "./components/pages/shareResult2";
 import BirthDate from "./components/pages/birthDate";
 import Home from "./components/pages/home";
 import Name from "./components/pages/name";
+import Info from "./components/pages/info";
+import YourAge from "./components/pages/yourAge";
+import YourCity from "./components/pages/yourCity";
 
 function App() {
   return (
       <Router>
-        <Route exact path="/" component={Home}/>
+        <Route exact path="/" component={Home} />
         <Route path="/voltaJesus" component={WhatIfJesusComeBack} />
-        <Route path="/result" component={Result}/>
-        <Route path="/result2" component={Result2}/>
-        <Route path="/shareResult" component={ShareResult}/>
-        <Route path="/shareResult2" component={ShareResult2}/>
-        <Route path="/birthDate" component={BirthDate}/>
+        <Route path="/result" component={Result} />
+        <Route path="/result2" component={Result2} />
+        <Route path="/shareResult" component={ShareResult} />
+        <Route path="/shareResult2" component={ShareResult2} />
+        <Route path="/birthDate" component={BirthDate} />
         <Route path="/name" component={Name} />
+        <Route path="/info" component={Info} />
+        <Route path="/yourAge" component={YourAge} />
+        <Route path="/yourCity" component={YourCity} />
       </Router>
   );
 }
