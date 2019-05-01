@@ -1,0 +1,59 @@
+@import "../../../theme";
+
+.pictureLayout{
+  $heightLayer: 75vh;
+  background-size: cover;
+  
+  .topBar{
+    z-index: 3;
+    
+    .logoChurch path{
+      fill: white;
+    }
+  }
+  
+  .wrapperBackButton{
+    z-index: 3;
+    .backButton .text span{
+      color: white;
+    }
+  }
+
+  .footer .logo path{
+    fill: white;
+  }
+
+  .gatinho{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+
+  .gatinho::after{
+    content: "";
+    height: $heightLayer;
+    width: 100vw;
+    opacity: .45;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .gatinho.blue::after{
+      background-color: $backgroundPrimaryColor;
+  }
+  
+  .bodyLayout{
+    z-index: 2;
+    padding: 0 60px;
+    align-self: flex-start;
+    
+    &.blue{
+      color: white;
+    }
+    
+    min-height: calc(#{$heightLayer} - #{$heightLogoChurch} - #{$paddingLayout});
+  }
+  
+}

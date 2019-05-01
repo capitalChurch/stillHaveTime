@@ -7,6 +7,7 @@ import WhatIfJesusComeBack from "./components/pages/backOfJesus";
 import Result2 from "./components/pages/result2";
 import ShareResult from "./components/pages/shareResult";
 import ShareResult2 from "./components/pages/shareResult2";
+import BirthDate from "./components/pages/birthDate";
 import Home from "./components/pages/home";
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Route path="/result2" component={Result2}/>
         <Route path="/shareResult" component={ShareResult}/>
         <Route path="/shareResult2" component={ShareResult2}/>
+        <Route path="/birthDate" component={BirthDate}/>
       </Router>
   );
 }

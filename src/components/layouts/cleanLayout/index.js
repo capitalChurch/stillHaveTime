@@ -8,7 +8,7 @@ import "./cleanLayout.scss";
 
 export default function(props){
     return (
-        <div className={`${props.className} layoutClean`}>
+        <div className={`${props.className} layoutClean`} style={props.style}>
             <div className="topBar">
                 <LogoChurch/>
                 <Square/>
