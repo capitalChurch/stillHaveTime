@@ -34,14 +34,18 @@
     content: "";
     height: $heightLayer;
     width: 100vw;
-    opacity: .45;
     position: absolute;
     top: 0;
     left: 0;
   }
-  
+
   .gatinho.blue::after{
-      background-color: $backgroundPrimaryColor;
+    background-color: $backgroundPrimaryColor;
+    opacity: .45;
+  }
+  .gatinho.yellow::after{
+    background-color: $backgroundAccentColor;
+    opacity: .9;
   }
   
   .bodyLayout{

@@ -7,13 +7,15 @@ import Square from "../../utils/square";
 import "./cleanLayout.scss";
 
 export default function(props){
+    const style = props.color || "yellow";
+    const styleComponents = style === "yellow" ? "primary" : "accent" ;
     return (
         <div className={`${props.className} layoutClean`} style={props.style}>
             <div className="topBar">
                 <LogoChurch/>
-                <Square/>
+                <Square style={styleComponents}/>
             </div>
-            <BackButton/>
+            <BackButton style={styleComponents}/>
             <div className="bodyLayout">
                 {props.children}
             </div>

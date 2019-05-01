@@ -1,7 +1,7 @@
 import React from "react";
 import PictureLayout from "../../layouts/pictureLayout";
 import ChooseAge from "../../utils/chooseAge";
-//import Background from "../../../assets/images/background/age_color_bg.png"
+import Background from "../../../assets/images/background/age_color_bg.png"
 
 import "./hisAge.scss";
 
@@ -14,7 +14,7 @@ export default class HisAge extends React.Component{
 
     render = () => {
         return (
-            <PictureLayout colorLayer="yellow" className="hisAge">
+            <PictureLayout colorLayer="yellow" className="hisAge" bgImage={Background}>
                 <div className="firstColumn">
                     <span className="title">Qual a idade<br/>dele(a)?</span>
                     <span className="name">Anna</span>

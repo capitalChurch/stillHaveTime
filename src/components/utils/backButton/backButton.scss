@@ -6,6 +6,7 @@
   left: 24px;
   transform: translateY(-50%);
   
+  
   .backButton{
     width: 100%;
     display: flex;
@@ -20,8 +21,7 @@
       span{
         text-transform: uppercase;
         color: $primaryColor;
-        font-family: "Acumin Pro Bold";
-        
+        font-family: $familySecundary;
       }
     }
     
@@ -34,6 +34,10 @@
           fill: $accentColor;
         }
       }
+    }
+    
+    &.primary .icon .arrowBack .cls-1{
+      fill: $primaryColor;
     }
   }
 

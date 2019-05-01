@@ -26,7 +26,7 @@ function App() {
         <Route path="/shareResult2" component={ShareResult2} />
         <Route path="/birthDate" component={BirthDate} />
         <Route path="/name" component={Name} />
-        <Route path="/info" component={Info} />q
+        <Route path="/info" component={Info} />
         <Route path="/yourAge" component={YourAge} />
         <Route path="/yourCity" component={YourCity} />
         <Route path="/hisAge" component={HisAge}/>
