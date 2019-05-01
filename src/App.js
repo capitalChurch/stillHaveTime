@@ -9,6 +9,7 @@ import ShareResult from "./components/pages/shareResult";
 import ShareResult2 from "./components/pages/shareResult2";
 import BirthDate from "./components/pages/birthDate";
 import Home from "./components/pages/home";
+import Name from "./components/pages/name";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/shareResult" component={ShareResult}/>
         <Route path="/shareResult2" component={ShareResult2}/>
         <Route path="/birthDate" component={BirthDate}/>
+        <Route path="/name" component={Name} />
       </Router>
   );
 }

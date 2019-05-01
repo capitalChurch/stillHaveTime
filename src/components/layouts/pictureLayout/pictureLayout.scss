@@ -45,15 +45,18 @@
   }
   
   .bodyLayout{
-    z-index: 2;
-    padding: 0 60px;
     align-self: flex-start;
-    
-    &.blue{
-      color: white;
+
+    .bodyLayoutPicture{
+      z-index: 2;
+      padding: 0 90px;
+      
+      &.blue{
+        color: white;
+      }
+      
+      min-height: calc(#{$heightLayer} - #{$heightLogoChurch} - #{$paddingLayout});
     }
-    
-    min-height: calc(#{$heightLayer} - #{$heightLogoChurch} - #{$paddingLayout});
   }
   
 }

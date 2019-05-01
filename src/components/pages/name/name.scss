@@ -1,0 +1,30 @@
+@import "../../../theme";
+
+.name{
+  .bodyLayoutPicture {
+    display: flex;
+    justify-content: space-between;
+    
+    vertical-align: bottom;
+    
+    span {
+      font-family: $familySecundary;
+      padding: 0 24px;
+    }
+    .form{
+      padding: 0 24px;
+      
+      
+      input{
+        border: none;
+        background: $accentColor;
+        color: $darkPrimaryColor;
+        font-family: $familySecundary;
+        font-size: $h3FontSize;
+        padding-left: 16px;
+        width: 420px;
+        transform: translateY(110%);
+      }
+    }
+  }
+}
