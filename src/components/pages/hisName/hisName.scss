@@ -1,15 +1,16 @@
 @import "../../../theme";
 
-.name{
+.hisName{
   .bodyLayoutPicture {
     display: flex;
     justify-content: space-between;
-    
+
     vertical-align: bottom;
-    
+
     span {
       font-family: $familySecundary;
       padding: 0 24px;
+      color: white;
     }
     .form{
       padding: 0 24px;

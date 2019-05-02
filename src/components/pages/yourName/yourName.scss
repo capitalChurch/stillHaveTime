@@ -1,0 +1,18 @@
+@import "../../../theme";
+
+.yourName{
+  .bodyLayoutPicture {
+    display: flex;
+    justify-content: space-between;
+    
+    vertical-align: bottom;
+    
+    span {
+      font-family: $familySecundary;
+      padding: 0 24px;
+    }
+    .form{
+      padding: 0 24px;
+    }
+  }
+}

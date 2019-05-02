@@ -9,12 +9,13 @@ import ShareResult from "./components/pages/shareResult";
 import ShareResult2 from "./components/pages/shareResult2";
 import BirthDate from "./components/pages/birthDate";
 import Home from "./components/pages/home";
-import Name from "./components/pages/name";
 import Info from "./components/pages/info";
+import YourName from "./components/pages/yourName";
 import YourAge from "./components/pages/yourAge";
 import YourCity from "./components/pages/yourCity";
 import HisAge from "./components/pages/hisAge";
 import HisCity from "./components/pages/hisCity";
+import HisName from "./components/pages/hisName";
 
 function App() {
   return (
@@ -26,12 +27,13 @@ function App() {
         <Route path="/shareResult" component={ShareResult} />
         <Route path="/shareResult2" component={ShareResult2} />
         <Route path="/birthDate" component={BirthDate} />
-        <Route path="/name" component={Name} />
         <Route path="/info" component={Info} />
+        <Route path="/yourName" component={YourName } />
         <Route path="/yourAge" component={YourAge} />
         <Route path="/yourCity" component={YourCity} />
         <Route path="/hisAge" component={HisAge}/>
         <Route path="/hisCity" component={HisCity}/>
+        <Route path="/hisName" component={HisName}/>
       </Router>
   );
 }
