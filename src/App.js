@@ -16,6 +16,7 @@ import YourCity from "./components/pages/yourCity";
 import HisAge from "./components/pages/hisAge";
 import HisCity from "./components/pages/hisCity";
 import HisName from "./components/pages/hisName";
+import Relation from "./components/pages/relation";
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
         <Route path="/hisAge" component={HisAge}/>
         <Route path="/hisCity" component={HisCity}/>
         <Route path="/hisName" component={HisName}/>
+        <Route path="/relation" component={Relation}/>
       </Router>
   );
 }

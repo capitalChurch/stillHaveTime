@@ -1,0 +1,63 @@
+@import "../../../theme";
+
+.chooseOne{
+  span, svg, div{
+    cursor: pointer;
+  }
+  
+  .arrow{
+    height: 36px;
+  }
+  
+  span{
+    font-family: $familySecundary;
+  }
+  
+  .firstLine,.thirdLine{
+    display: flex;
+    height: 42px;
+    overflow-y: hidden;
+    svg{
+      vertical-align: top;
+      padding: 6px 8px;
+      background: $primaryColor;
+      
+      &:hover{
+      }
+    }
+    
+    span {
+      color: $darkPrimaryColor;
+    }
+
+
+    &:hover{
+      span {
+        color: $hoverDarkPrimaryColor;
+      }
+      svg{
+        background: $darkPrimaryColor;
+      }
+    }
+  }
+  
+  .secondLine{
+    background: white;
+    padding: 4px 8px;
+    
+    &:hover{
+      color: $darkPrimaryColor;
+    }
+  }
+  
+  
+  .firstLine {
+    svg{
+      transform: rotate(180deg) translateY(4px);
+    }
+    .wrapperText {
+      transform: translateY(-100%);
+    }
+  }
+
+}
