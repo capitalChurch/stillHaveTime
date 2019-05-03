@@ -4,7 +4,6 @@ import Background from "../../../assets/images/background/ferias_color_bg.png";
 import ChooseOne from "../../utils/chooseOne";
 
 import "./relation.scss";
-import InputText from "../yourCity";
 
 export default class Relation extends React.Component{
     state = {

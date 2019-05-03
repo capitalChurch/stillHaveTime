@@ -1,0 +1,52 @@
+@import "../../../theme.scss";
+
+.familiarRelation{
+    $width: calc(50vw - #{$paddingLayout} - 180px);
+    
+    .bodyLayoutPicture{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        
+        .title{
+            width: calc(100vw - #{($paddingLayout + 90px) * 2});
+            
+            font-family: $familySecundary;
+            font-size: $h4FontSize;
+            line-height: $h3FontSize;
+            color: white;
+        }
+        
+        .chooseOne, .options{
+            width: $width;
+        }
+        
+        .options{
+            display: flex;
+            flex-wrap: wrap;
+            align-content: flex-start;
+    
+            font-family: $familySecundary;
+            font-size: $h5FontSize;
+            line-height: $h5FontSize;
+            span{
+                height: $h5FontSize;
+                padding: 4px 8px;
+                margin: 8px;
+                background: $primaryColor;
+                color: white;
+                cursor: pointer;
+                
+                &:hover{
+                    background: $darkPrimaryColor;
+                }
+                
+                &.active{
+                    background: white;
+                    color: $darkPrimaryColor;
+                    cursor: default;
+                }
+            }
+        }
+    }
+}
