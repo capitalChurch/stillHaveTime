@@ -10,12 +10,13 @@ export const typesRelations: TypesRelation[] = [
     {type: EnumRelation.pai, typeSuperior: EnumRelation.familia, label: "Pai"},
     {type: EnumRelation.filho, typeSuperior: EnumRelation.familia, label: "Filho(a)"},
     {type: EnumRelation.irmao, typeSuperior: EnumRelation.familia, label: "Irmão(a)"},
-    {type: EnumRelation.neto, typeSuperior: EnumRelation.familia, label: "Avó/Avô"},
+    {type: EnumRelation.avo, typeSuperior: EnumRelation.familia, label: "Avó/Avô"},
+    {type: EnumRelation.neto, typeSuperior: EnumRelation.familia, label: "Neto(a)"},
     {type: EnumRelation.tio, typeSuperior: EnumRelation.familia, label: "Tio(a)"},
     {type: EnumRelation.sobrinho, typeSuperior: EnumRelation.familia, label: "Sobrinho(a)"},
     {type: EnumRelation.sogro, typeSuperior: EnumRelation.familia, label: "Sogro(a)"},
     {type: EnumRelation.cunhado, typeSuperior: EnumRelation.familia, label: "Cunhado(a)"},
-    {type: EnumRelation.genro, typeSuperior: EnumRelation.genro, label: "Genro/Nora"}
+    {type: EnumRelation.genro, typeSuperior: EnumRelation.familia, label: "Genro/Nora"}
 ];
 
 export const defaults: Defaults = {
