@@ -18,6 +18,7 @@ import HisCity from "./components/pages/hisCity";
 import HisName from "./components/pages/hisName";
 import Relation from "./components/pages/relation";
 import FamiliarRelation from "./components/pages/familiarRelation";
+import VacationTogether from "./components/pages/vacationTogether";
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
         <Route path="/hisName" component={HisName}/>
         <Route path="/relation" component={Relation}/>
         <Route path="/familiarRelation" component={FamiliarRelation} />
+        <Route path="/vacationTogether" component={VacationTogether} />
       </Router>
   );
 }
