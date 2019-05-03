@@ -6,7 +6,7 @@ import "./chooseNumber.scss";
 export default class ChooseNumber extends React.Component{
 
     renderItem = i => {
-        const {value, changeNumber, qtyChange} = this.props;
+        const {value, changeNumber, qtyChange, limit} = this.props;
         let qtyToChange = qtyChange || 10;
         
         const style = Math.floor(value/qtyToChange) === i + 1 ? "active" : "";
@@ -18,15 +18,24 @@ export default class ChooseNumber extends React.Component{
     };
     
     render = () => {
-        const items = Array.from({length: 10}, (x, i) => i);
+        const {qtyChange, limit, value} = this.props;
+        const length = !!limit ? Math.floor(limit / qtyChange) : 10;
+        
+        const items = Array.from({ length }, (x, i) => i);
+        
+        const minusArrowDisabled = value === 0;
+        const maxArrowDisabled = !!limit && value === limit;
+        
         const style = `${this.props.color} arrow`;
+        const styleLeft = `${style} ${minusArrowDisabled ? "disabled" : ""} arrowLeft`;
+        const styleRight = `${style} ${maxArrowDisabled ? "disabled" : ""} arrowRight`;
         return(
             <div className="chooseNumber">
-                <Arrow className={`${style} arrowLeft`} onClick={() => this.props.changeNumber(this.props.value-1)}/>
+                <Arrow className={styleLeft} onClick={() => !minusArrowDisabled && this.props.changeNumber(this.props.value-1)}/>
                 <div className="barDates">
                     {items.map(this.renderItem)}
                 </div>
-                <Arrow className={`${style} arrowRight`} onClick={() => this.props.changeNumber(this.props.value+1)}/>
+                <Arrow className={styleRight} onClick={() => !maxArrowDisabled && this.props.changeNumber(this.props.value+1)}/>
             </div>
         )
     }

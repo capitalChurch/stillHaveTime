@@ -1,0 +1,45 @@
+@import "../../../theme";
+
+.regularTimeTogether{
+  .bodyLayout .bodyLayoutPicture{
+    $paddingBodyLayout: 90px;
+    
+    width: calc(100vw - (#{$paddingLayout + $paddingBodyLayout} * 2));
+
+    padding: 0 90px;
+
+    display: flex;
+    align-self: center;
+
+    >*{
+      width: 50%;
+    }
+
+    .firstColumn{
+      font-family: $familySecundary;
+      font-size: $h2FontSize;
+      line-height: $h2FontSize;
+
+      .title{
+        color: white
+      }
+    }
+
+    .secondColumn{
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .age{
+        font-size: $h1FontSize * 2;
+        line-height: $h1FontSize * 2;
+        color: $primaryColor;
+      }
+
+      >*{
+        padding: 8px 0;
+      }
+    }
+  }
+}

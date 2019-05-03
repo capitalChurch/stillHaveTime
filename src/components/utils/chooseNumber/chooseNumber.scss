@@ -34,6 +34,20 @@
         }
       }
     }
+
+    &.disabled{
+      cursor: default;
+      background: gray;
+      polygon{
+        fill: lightgray;
+      }
+      &:hover{
+        background: gray;
+        polygon{
+          fill: lightgray;
+        }
+      }
+    }
     
     &.arrowLeft{
       transform: rotate(90deg) translateY(4px) translateX(-5px);

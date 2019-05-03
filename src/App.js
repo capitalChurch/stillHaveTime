@@ -20,6 +20,7 @@ import Relation from "./components/pages/relation";
 import FamiliarRelation from "./components/pages/familiarRelation";
 import VacationTogether from "./components/pages/vacationTogether";
 import TimeVacationTogether from "./components/pages/timeVacationTogether";
+import RegularTimeTogether from "./components/pages/regularTimeTogether";
 
 function App() {
   return (
@@ -42,6 +43,7 @@ function App() {
         <Route path="/familiarRelation" component={FamiliarRelation} />
         <Route path="/vacationTogether" component={VacationTogether} />
         <Route path="/timeVacationTogether" component={TimeVacationTogether} />
+        <Route path="/regularTimeTogether" component={RegularTimeTogether} />
       </Router>
   );
 }
