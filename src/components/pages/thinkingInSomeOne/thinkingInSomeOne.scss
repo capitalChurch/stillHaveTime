@@ -1,0 +1,42 @@
+@import "../../../theme";
+
+.gato{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 38%;
+  height: 75vh;
+  background: $accentColor;
+}
+
+.thinkingInSomeOne{
+  background: #002BAE;
+  
+  .logoChurch, .logo {
+    path {
+      fill: white;
+    }
+  }
+  .wrapperBackButton .backButton.primary {
+    .text span{
+      color: white;
+    }
+    .icon .arrowBack polygon.cls-1 {
+      fill: $accentColor;
+    }
+  }
+  
+  .bodyLayout{
+    width: 40%;
+    padding: 0 90px;
+    position: absolute;
+    top: $paddingLayout + $heightLogoChurch + 16px;
+    
+    span{
+      color: white;
+      font-family: $familySecundary;
+      font-size: $h2FontSize;
+      line-height: $h2FontSize;
+    }
+  }
+}
