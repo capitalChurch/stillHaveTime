@@ -1,12 +1,11 @@
 import React from "react";
 import PictureLayout from "../../layouts/pictureLayout";
-import ChooseAge from "../../utils/chooseAge";
+import ChooseNumber from "../../utils/chooseNumber";
 import AgeBg from "../../../assets/images/background/age_bg.png";
 
 import "./yourAge.scss";
 
 export default class YourAge extends React.Component{
-    
     state = {
         age: 58
     };
@@ -22,7 +21,7 @@ export default class YourAge extends React.Component{
                 </div>
                 <div className="secondColumn">
                     <span className="age">{this.state.age}</span>
-                    <ChooseAge changeAge={this.changeAge} value={this.state.age}/>
+                    <ChooseNumber changeNumber={this.changeAge} value={this.state.age}/>
                 </div>
             </PictureLayout>
         )

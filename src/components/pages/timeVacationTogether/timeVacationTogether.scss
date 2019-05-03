@@ -1,0 +1,60 @@
+@import "../../../theme";
+
+.timeVacationTogether{
+  .bodyLayout .bodyLayoutPicture{
+    $sizeWidth: calc(100vw - (#{$paddingLayout} * 2));
+    width: $sizeWidth;
+
+    padding: 0;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-self: center;
+
+    >*{
+      padding: 0 90px;
+    }
+
+    .labelTitle{
+      width: $sizeWidth;
+      color: #ffffffbb;
+      font-family: $familySecundary;
+      font-size: $h4FontSize;
+      line-height: $h4FontSize;
+    }
+
+    .firstColumn{
+      >*{
+        display: block;
+      }
+
+      font-family: $familySecundary;
+
+      .title{
+        color: white
+      }
+
+      .name{
+        color: $primaryColor;
+        font-size: $h3FontSize;
+      }
+    }
+
+    .secondColumn{
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transform: translateY(-30px);
+      .age{
+        font-size: $h1FontSize * 2;
+        line-height: $h1FontSize * 2;
+        color: $primaryColor;
+      }
+
+      >*{
+        padding: 8px 0;
+      }
+    }
+  }
+}

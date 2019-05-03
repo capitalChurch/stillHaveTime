@@ -19,6 +19,7 @@ import HisName from "./components/pages/hisName";
 import Relation from "./components/pages/relation";
 import FamiliarRelation from "./components/pages/familiarRelation";
 import VacationTogether from "./components/pages/vacationTogether";
+import TimeVacationTogether from "./components/pages/timeVacationTogether";
 
 function App() {
   return (
@@ -40,6 +41,7 @@ function App() {
         <Route path="/relation" component={Relation}/>
         <Route path="/familiarRelation" component={FamiliarRelation} />
         <Route path="/vacationTogether" component={VacationTogether} />
+        <Route path="/timeVacationTogether" component={TimeVacationTogether} />
       </Router>
   );
 }
