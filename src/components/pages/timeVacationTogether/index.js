@@ -20,7 +20,7 @@ export default class TimeVacationTogether extends React.Component{
                     <span className="title">Quantos dias <br /> ao ano?</span>
                 </div>
                 <div className="secondColumn">
-                    <span className="age">{this.state.vacationTimeTogether}</span>
+                    <span className="numberTimeVacation">{this.state.vacationTimeTogether}</span>
                     <ChooseNumber value={this.state.vacationTimeTogether} changeNumber={this.changeTime} qtyChange={3} color="blue" />
                 </div>
             </PictureLayout>

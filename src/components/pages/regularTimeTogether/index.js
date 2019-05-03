@@ -19,7 +19,7 @@ export default class RegularTimeTogether extends React.Component{
                     <span className="title">Quando estão no mesmo lugar, quantas horas passam juntos?</span>
                 </div>
                 <div className="secondColumn">
-                    <span className="age">{this.state.regularTimeTogether}</span>
+                    <span className="numberTime">{this.state.regularTimeTogether}</span>
                     <ChooseNumber changeNumber={this.changeTimeTogether} value={this.state.regularTimeTogether} color="blue" qtyChange={3} limit={24}/>
                 </div>
             </PictureLayout>

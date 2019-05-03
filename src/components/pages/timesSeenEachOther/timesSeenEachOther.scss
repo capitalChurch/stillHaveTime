@@ -1,0 +1,67 @@
+@import "../../../theme";
+
+.timesSeenEachOther{
+  .bodyLayout .bodyLayoutPicture{
+    display: flex;
+    
+    font-family: $familySecundary;
+    color: white;
+    
+    height: calc(100vh - #{$heightLogoChurch} - #{$paddingLayout * 2});
+    padding: 16px 90px;
+    
+    >div{
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+    }
+    
+    .firstColumn {  
+      .firstLine {
+        font-size: $h45FontSize;
+        line-height: $h45FontSize;
+        text-transform: uppercase;
+      }
+
+      .secondLine {
+        font-size: $h2FontSize;
+        line-height: $h2FontSize;
+        text-transform: lowercase;
+      }
+    }
+      
+    .secondColumn{
+      align-items: center;
+      .numberTimes{
+        font-family: $familyPrimary;
+        font-style: $h1FontSize;
+        line-height: $h1FontSize;
+        color: $primaryColor;
+      }
+      
+      .barOptions{
+        margin-top: 60px;
+        
+        span{
+          padding: 8px 16px;
+          background: $primaryColor;
+          color: white;
+          font-size: $h45FontSize;
+          line-height: $h45FontSize;
+          text-transform: uppercase;
+          cursor: pointer;
+          
+          &:hover{
+            background: $darkPrimaryColor;
+          }
+          
+          &.active{
+            background: white;
+            color: $primaryColor;
+            cursor: default;
+          }
+        }
+      }
+    }
+  }
+}
