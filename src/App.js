@@ -23,6 +23,7 @@ import TimeVacationTogether from "./components/pages/timeVacationTogether";
 import RegularTimeTogether from "./components/pages/regularTimeTogether";
 import TimesSeenEachOther from "./components/pages/timesSeenEachOther";
 import ThinkingInSomeOne from "./components/pages/thinkingInSomeOne";
+import PressPlay from "./components/pages/pressPlay";
 
 function App() {
   return (
@@ -48,6 +49,7 @@ function App() {
         <Route path="/regularTimeTogether" component={RegularTimeTogether} />
         <Route path="/timesSeenEachOther" component={TimesSeenEachOther} />
         <Route path="/thinkingInSomeOne" component={ThinkingInSomeOne} />
+        <Route path="/pressPlay" component={PressPlay} />
       </Router>
   );
 }

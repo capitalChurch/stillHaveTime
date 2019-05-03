@@ -4,7 +4,7 @@ import CleanLayout from "../cleanLayout";
 import "./pictureLayout.scss";
 
 export default function(props){
-    var layoutStyle = {
+    const layoutStyle = {
         backgroundImage: `url(${props.bgImage})`
     };
     

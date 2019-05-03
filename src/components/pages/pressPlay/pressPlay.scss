@@ -1,0 +1,50 @@
+@import "../../../theme";
+
+.pressPlay{
+
+  .logoChurch, .logo {
+    path {
+      fill: white;
+    }
+  }
+  
+  .square{
+    background: $accentColor;
+  }
+  
+  .wrapperBackButton .backButton.primary {
+    .text span{
+      color: white;
+    }
+    .icon .arrowBack polygon.cls-1 {
+      fill: $accentColor;
+    }
+  }
+
+  .bodyLayout{
+    width: 50%;
+    span{
+      width: 35%;
+      color: white;
+      font-family: $familyPrimary;
+      font-size: $h2FontSize;
+      line-height: $h2FontSize;
+      
+      padding: 0 40px;
+    }
+    svg{
+      height: 150px;
+      position: absolute;
+      right: 50%;
+      transform: translateX(50%);
+      cursor: pointer;
+      
+      polygon, path{
+        fill: $accentColor;
+        &:hover{
+          fill: $accentLightColor;
+        }
+      }
+    }
+  }
+}
