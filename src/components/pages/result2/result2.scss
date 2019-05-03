@@ -5,35 +5,42 @@
     flex-direction: column;
     align-items: center;
     
-    p{
-      font-family: $familySecundary;
-      font-style: normal;
-      font-weight: 900;
-      font-size: $h4FontSize;
-      line-height: $h4FontSize;
-      letter-spacing: -1px;
-    }
-    
-    .resultBar{
-      margin: 8px 0;
-      padding: 8px 32px;
-      background: $accentColor;
+    .wrapperResult2{
+      width: 55vw;
+      $fontSize: $h4FontSize;
+      p{
+        font-family: $familySecundary;
+        font-style: normal;
+        font-weight: 900;
+        font-size: $fontSize;
+        line-height: $fontSize;
+        letter-spacing: -1px;
+        margin: 16px 0;
+        padding-right: $paddingLayout; 
+      }
       
-      span{
-        font-size: $h3FontSize;
-        vertical-align: top;
+      .resultBar{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        white-space: nowrap;
+        padding: 8px 32px;
+        background: $accentColor;
         
-        &:not(:last-child)::after{
-          content: "|";
-          vertical-align: top;
-          color: white;
-          padding: 24px;
+        span{
+          font-size: $h3FontSize;
+        }
+        
+        .divider{
+          background: white;
+          height: $fontSize * 1.5;
+          width: $fontSize / 2.5;
         }
       }
-    }
-    
-    >*{
-      padding: 0 8px;
+      
+      >*{
+        padding: 0 8px;
+      }
     }
   }
 }

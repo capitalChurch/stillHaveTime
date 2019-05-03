@@ -6,9 +6,10 @@
     
     font-family: $familySecundary;
     color: white;
-    
-    height: calc(100vh - #{$heightLogoChurch} - #{$paddingLayout * 2});
-    padding: 16px 90px;
+
+    $thisHeightPadding: 16px;
+    padding: $thisHeightPadding 90px;
+    height: calc(100vh - #{$heightLogoChurch} - #{$paddingLayout * 2} - #{$thisHeightPadding * 2});
     
     >div{
       display: flex;
@@ -32,10 +33,11 @@
       
     .secondColumn{
       align-items: center;
+      $fontSize: $h1FontSize * 1.6;
       .numberTimes{
         font-family: $familyPrimary;
-        font-style: $h1FontSize;
-        line-height: $h1FontSize;
+        font-size: $fontSize;
+        line-height: $fontSize;
         color: $primaryColor;
       }
       

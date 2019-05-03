@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import './App.scss';
 
 import Result from "./components/pages/result";
@@ -30,30 +30,33 @@ import Calculates from "./components/pages/calculates";
 function App() {
   return (
       <Router>
-        <Route exact path="/" component={Home} />
-        <Route path="/home2" component={Home2} />
-        <Route path="/voltaJesus" component={WhatIfJesusComeBack} />
-        <Route path="/result" component={Result} />
-        <Route path="/result2" component={Result2} />
-        <Route path="/shareResult" component={ShareResult} />
-        <Route path="/shareResult2" component={ShareResult2} />
-        <Route path="/birthDate" component={BirthDate} />
-        <Route path="/info" component={Info} />
-        <Route path="/yourName" component={YourName } />
-        <Route path="/yourAge" component={YourAge} />
-        <Route path="/yourCity" component={YourCity} />
-        <Route path="/hisAge" component={HisAge}/>
-        <Route path="/hisCity" component={HisCity}/>
-        <Route path="/hisName" component={HisName}/>
-        <Route path="/relation" component={Relation}/>
-        <Route path="/familiarRelation" component={FamiliarRelation} />
-        <Route path="/vacationTogether" component={VacationTogether} />
-        <Route path="/timeVacationTogether" component={TimeVacationTogether} />
-        <Route path="/regularTimeTogether" component={RegularTimeTogether} />
-        <Route path="/timesSeenEachOther" component={TimesSeenEachOther} />
-        <Route path="/thinkingInSomeOne" component={ThinkingInSomeOne} />
-        <Route path="/pressPlay" component={PressPlay} />
-        <Route path="/calculates" component={Calculates} />
+            <Switch>
+                  <Route exact path="/" component={Home} />
+                  <Route path="/home2" component={Home2} />
+                  <Route path="/voltaJesus" component={WhatIfJesusComeBack} />
+                  <Route path="/result" component={Result} />
+                  <Route path="/result2" component={Result2} />
+                  <Route path="/shareResult" component={ShareResult} />
+                  <Route path="/shareResult2" component={ShareResult2} />
+                  <Route path="/birthDate" component={BirthDate} />
+                  <Route path="/info" component={Info} />
+                  <Route path="/yourName" component={YourName } />
+                  <Route path="/yourAge" component={YourAge} />
+                  <Route path="/yourCity" component={YourCity} />
+                  <Route path="/hisAge" component={HisAge}/>
+                  <Route path="/hisCity" component={HisCity}/>
+                  <Route path="/hisName" component={HisName}/>
+                  <Route path="/relation" component={Relation}/>
+                  <Route path="/familiarRelation" component={FamiliarRelation} />
+                  <Route path="/vacationTogether" component={VacationTogether} />
+                  <Route path="/timeVacationTogether" component={TimeVacationTogether} />
+                  <Route path="/regularTimeTogether" component={RegularTimeTogether} />
+                  <Route path="/timesSeenEachOther" component={TimesSeenEachOther} />
+                  <Route path="/thinkingInSomeOne" component={ThinkingInSomeOne} />
+                  <Route path="/pressPlay" component={PressPlay} />
+                  <Route path="/calculates" component={Calculates} />
+                  <Route component={Home}/>
+            </Switch>
       </Router>
   );
 }
