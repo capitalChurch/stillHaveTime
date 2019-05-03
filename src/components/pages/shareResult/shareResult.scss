@@ -25,6 +25,11 @@
       
       color: $accentColor;
       background: $darkPrimaryColor;
+
+      cursor: pointer;
+      &:hover{
+        background: $hoverDarkPrimaryColor;
+      }
     }
   }
 }
