@@ -1,0 +1,70 @@
+@import "../../../theme";
+
+$heightBackground: 75vh;
+
+.yellowBackground{
+  background-color: $backgroundAccentColor;
+  opacity: .85;
+  height: $heightBackground;
+  width: 49%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.blueBackground{
+  background-color: $backgroundPrimaryColor;
+  opacity: .65;
+  height: $heightBackground;
+  width: 51%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 0;
+}
+
+.calculates{
+  >*{
+    z-index: 2;
+  }
+  
+  .square{
+    background: $accentColor;
+  }
+
+  .wrapperBackButton .backButton .text span{
+    color: white;
+  }
+  
+  .logo path{
+    fill: white;
+  }
+
+  .bodyLayout{
+    >span{
+      cursor: pointer;
+    }
+    &:hover{
+      .firstPart{
+        color: $backgroundPseudoPrimaryColor;
+      }
+
+      .secondPart{
+        color: white;
+      }
+    }
+  }
+  
+  .firstPart{
+    color: $primaryColor;
+    font-size: $h1FontSize * 2;
+    line-height: $h1FontSize * 2;
+  }
+  
+  .secondPart{
+    color: #eee;
+    font-size: $h1FontSize * 2;
+    line-height: $h1FontSize * 2;
+  }
+}

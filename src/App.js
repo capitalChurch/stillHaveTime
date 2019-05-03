@@ -24,6 +24,7 @@ import RegularTimeTogether from "./components/pages/regularTimeTogether";
 import TimesSeenEachOther from "./components/pages/timesSeenEachOther";
 import ThinkingInSomeOne from "./components/pages/thinkingInSomeOne";
 import PressPlay from "./components/pages/pressPlay";
+import Calculates from "./components/pages/calculates";
 
 function App() {
   return (
@@ -50,6 +51,7 @@ function App() {
         <Route path="/timesSeenEachOther" component={TimesSeenEachOther} />
         <Route path="/thinkingInSomeOne" component={ThinkingInSomeOne} />
         <Route path="/pressPlay" component={PressPlay} />
+        <Route path="/calculates" component={Calculates} />
       </Router>
   );
 }
