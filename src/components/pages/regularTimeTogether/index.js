@@ -4,13 +4,16 @@ import Background from "../../../assets/images/background/vezesquesevem_color_bg
 import ChooseNumber from "../../utils/chooseNumber";
 
 import "./regularTimeTogether.scss";
+import {getTimeSpend, saveHoursWhenTogether} from "../../../model/storage";
 
 export default class RegularTimeTogether extends React.Component{
     state = {
         regularTimeTogether: 24    
     };
     
-    changeTimeTogether = hours => this.setState({regularTimeTogether: hours});
+    componentWillMount = () => this.setState({regularTimeTogether: getTimeSpend().hoursWhenTogether});
+
+    changeTimeTogether = hours => this.setState({regularTimeTogether: hours}, () => saveHoursWhenTogether(hours));
     
     render = () => {
         return (

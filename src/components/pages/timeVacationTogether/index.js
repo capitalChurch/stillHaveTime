@@ -4,13 +4,16 @@ import Background from "../../../assets/images/background/vezesquesevem_color_bg
 import ChooseNumber from "../../utils/chooseNumber";
 
 import "./timeVacationTogether.scss";
+import {getTimeSpend, saveDaysVacation} from "../../../model/storage";
 
 export default class TimeVacationTogether extends React.Component{
     state = {
         vacationTimeTogether: 6    
     };
     
-    changeTime = days => this.setState({vacationTimeTogether: days});
+    componentWillMount = () => this.setState({vacationTimeTogether: getTimeSpend().daysInVacation});
+
+    changeTime = days => this.setState({vacationTimeTogether: days}, () => saveDaysVacation(days));
     
     render = () => {
         return (

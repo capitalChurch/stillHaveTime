@@ -1,7 +1,7 @@
 export interface TypesRegularTime{
     type: EnumTypeRegularTime;
     label: string;
-    limit: number;
+    limit: number | null;
     qtyChange: number;
 }
 

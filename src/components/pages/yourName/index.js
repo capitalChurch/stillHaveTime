@@ -4,15 +4,23 @@ import InputText from '../../utils/inputText'
 
 import BackGround from "../../../assets/images/background/name_bg.png";
 import "./yourName.scss";
+import {getMySelf, saveMyName} from "../../../model/storage";
 
 export default class YourName extends React.Component{
+    state = {
+        name: ""
+    };
     
+    componentWillMount = () => this.setState({name: getMySelf().name});
+    
+    handleChangeName = name => this.setState({name}, () => saveMyName(name));
+
     render = () =>
         (
         <PictureLayout className="yourName" colorLayer="blue" bgImage={BackGround}>
             <span>Qual é o<br/>seu nome?</span>
             <div className="form">
-                <InputText value="João Paulo"/>
+                <InputText value={this.state.name} onChange={this.handleChangeName}/>
             </div>
         </PictureLayout>
     )

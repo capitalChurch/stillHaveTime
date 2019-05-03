@@ -1,4 +1,4 @@
-import {Defaults, EnumRelation, EnumTypeRegularTime, TypesRelation} from "./types";
+import {Defaults, EnumRelation, EnumTypeRegularTime, TimeRelation, TypesRegularTime, TypesRelation} from "./types";
 
 export const keyStorage = "youStillHaveTime";
 
@@ -29,3 +29,10 @@ export const defaults: Defaults = {
     relation: EnumRelation.casal,
     hoursWhenTogether: 3
 };
+
+
+export const timesOptions: TypesRegularTime[] = [
+    {type: EnumTypeRegularTime.semana, label: "semana", limit: 7, qtyChange: 1 },
+    {type: EnumTypeRegularTime.mes, label: "mês", limit: 30, qtyChange: 3 },
+    {type: EnumTypeRegularTime.ano, label: "ano", limit: null, qtyChange: 4 },
+];

@@ -4,20 +4,23 @@ import ChooseNumber from "../../utils/chooseNumber";
 import Background from "../../../assets/images/background/age_color_bg.png"
 
 import "./hisAge.scss";
+import {getMyRelation, saveHisAge} from "../../../model/storage";
 
 export default class HisAge extends React.Component{
     state = {
         age: 58
     };
+    
+    componentWillMount = () => this.setState({age: getMyRelation().age});
 
-    changeAge = age => this.setState({age});
+    changeAge = age => this.setState({age}, () => saveHisAge(age));
 
     render = () => {
         return (
             <PictureLayout colorLayer="yellow" className="hisAge" bgImage={Background}>
                 <div className="firstColumn">
                     <span className="title">Qual a idade<br/>dele(a)?</span>
-                    <span className="name">Anna</span>
+                    <span className="name">{getMyRelation().name}</span>
                 </div>
                 <div className="secondColumn">
                     <span className="age">{this.state.age}</span>
