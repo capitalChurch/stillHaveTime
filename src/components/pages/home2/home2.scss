@@ -1,0 +1,96 @@
+@import "../../../theme";
+
+$paddingHeight: 60px;
+$paddingWidth: 50px;
+
+.yellowBar{
+  position: absolute;
+  height: ($paddingHeight * 2) + 20px;
+  width: 100vw;
+  background: $accentColor;
+  z-index: 0;
+  top: 0;
+}
+
+.home2 {
+  height: calc(100vh - #{$paddingHeight * 2});
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding: $paddingHeight $paddingWidth;
+
+  > div {
+    display: flex;
+    justify-content: space-between;
+    z-index: 2;
+  }
+
+  .logoChurch, .logo{
+    path {
+      fill: $darkPrimaryColor;
+    }
+  }
+  
+  .body{
+    width: calc(50% - #{$paddingWidth * 1.8});
+    display: flex;
+    flex-direction: column;
+    padding-top: $paddingHeight;
+    padding-bottom: $paddingHeight * .7;
+    padding-left: $paddingWidth * 1.8;
+    
+    font-family: $familySecundary;
+    .title{
+      font-size: $h2FontSize;
+      line-height: $h2FontSize;
+      color: $primaryColor;
+    }
+    
+    p{
+      color: $darkPrimaryColor;
+    }
+  }
+  
+  .btnVoltar{
+    display: flex;
+    align-items: center;
+    >*{
+      cursor: pointer;
+    }
+    
+    &:hover{
+      span{
+        background: $hoverDarkPrimaryColor;
+      }
+      svg{
+        background: $backgroundPrimaryColor;
+      }
+    }
+    
+    span{
+      vertical-align: middle;
+      font-size: $h5FontSize;
+      line-height: $h5FontSize;
+      text-transform: uppercase;
+      padding: 4px 16px 8px;
+      background: $darkPrimaryColor;
+      color: white;
+    }
+    
+    svg{
+      height: 28px;
+      width: 32px;
+      transform: rotate(180deg);
+      background: $primaryColor;
+      padding: 4px;
+    }
+  }
+  
+  .square{
+    $size: 50px;
+    height: $size;
+    width: $size;
+    background: $accentColor;
+  }
+}
