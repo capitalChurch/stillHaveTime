@@ -5,6 +5,7 @@ import Background from "../../../assets/images/background/age_color_bg.png"
 
 import "./hisAge.scss";
 import {getMyRelation, saveHisAge} from "../../../model/storage";
+import {EnumRotas} from "../../../model/types";
 
 export default class HisAge extends React.Component{
     state = {
@@ -17,7 +18,7 @@ export default class HisAge extends React.Component{
 
     render = () => {
         return (
-            <PictureLayout colorLayer="yellow" className="hisAge" bgImage={Background}>
+            <PictureLayout colorLayer="yellow" className="hisAge" bgImage={Background} nextPage={EnumRotas.HisCity}>
                 <div className="firstColumn">
                     <span className="title">Qual a idade<br/>dele(a)?</span>
                     <span className="name">{getMyRelation().name}</span>

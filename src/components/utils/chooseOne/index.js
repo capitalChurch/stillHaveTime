@@ -25,7 +25,7 @@ export default class ChooseOne extends Component {
                         </Fragment>
                     )}
                 </div>
-                <div className="secondLine">
+                <div className="secondLine" onClick={this.props.onClickChoosen}>
                     <span className="full">{choosen}</span>
                 </div>
                 {last && (

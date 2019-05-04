@@ -5,7 +5,8 @@ import ChooseOne from "../../utils/chooseOne";
 
 import "./relation.scss";
 import {getMyRelation, getRelation, saveRelation} from "../../../model/storage";
-import {typesRelations} from "../../../model/constants";
+import {changeRoute, typesRelations} from "../../../model/constants";
+import {EnumRotas} from "../../../model/types";
 
 export default class Relation extends React.Component{
     state = {
@@ -28,10 +29,12 @@ export default class Relation extends React.Component{
         const relationChoosen = typesRelations.find(x => x.type === this.state.relation);
         const labelChoosen = tpRelations.find(x => x.type === relationChoosen.type || x.type === relationChoosen.typeSuperior).label;
         
-        console.log(tpRelations);
-        
+        const hasChildren = !!typesRelations.find(x => x.typeSuperior === this.state.relation);
+        const nextPage = hasChildren ? EnumRotas.FamiliarRelation : EnumRotas.VacationTogether;
+        const handleSubmit = () => changeRoute(this.props, nextPage);
+            
         return (
-            <PictureLayout className="relation" colorLayer="yellow" bgImage={Background} >
+            <PictureLayout className="relation" colorLayer="yellow" bgImage={Background} nextPage={nextPage}>
                 <div className="firstColumn">
                     <span className="title">Qual é a relação<br/>que você tem<br />com essa pessoa?</span>
                     <div className="itens">
@@ -41,7 +44,7 @@ export default class Relation extends React.Component{
                     </div>
                 </div>
                 <div className="secondColumn">
-                    <ChooseOne itens={labelsTypesRelations} choosen={labelChoosen} onChange={this.changeRelation}/>
+                    <ChooseOne itens={labelsTypesRelations} choosen={labelChoosen} onChange={this.changeRelation} onClickChoosen={handleSubmit}/>
                 </div>
             </PictureLayout>
         )

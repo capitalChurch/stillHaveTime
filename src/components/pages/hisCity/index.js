@@ -5,6 +5,7 @@ import InputText from "../../utils/inputText";
 import Background from "../../../assets/images/background/address_color_bg.png";
 import "./hisCity.scss";
 import {getMyRelation, saveHisCity} from "../../../model/storage";
+import {EnumRotas} from "../../../model/types";
 
 export default class HisCity extends React.Component{
     state = {
@@ -18,7 +19,7 @@ export default class HisCity extends React.Component{
     render = () => {
         const {name, age} = getMyRelation();
         return(
-            <PictureLayout bgImage={Background} className="hisCity" colorLayer="yellow">
+            <PictureLayout bgImage={Background} className="hisCity" colorLayer="yellow" nextPage={EnumRotas.Relation}>
                 <div className="firstColumn">
                     <span className="title">Onde essa<br/>pessoa mora?</span>
                     <span className="item">{name}</span>
