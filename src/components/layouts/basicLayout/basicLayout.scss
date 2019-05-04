@@ -2,6 +2,7 @@
 
 .basicLayout{
   $sizePadding: $paddingLayout;
+  $sizePaddingMobile: $paddingLayoutMobile;
 
   display: flex;
   flex-direction: column;
@@ -18,5 +19,10 @@
   
   .topBar{
     z-index: 4;
+  }
+
+  @media only screen and (max-width: 420px) {
+    height: calc(100% - #{$sizePaddingMobile * 2});
+    padding: $sizePaddingMobile;
   }
 }

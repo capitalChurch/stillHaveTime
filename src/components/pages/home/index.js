@@ -26,8 +26,10 @@ export default function(props){
                 </div>                
             </div>
             <div className="moreInfo" onClick={ goToHome2 }>
-                <span className="label">Mais informações</span>
-                <span className="arrow"><Arrow/></span>
+                <div className="buttonMoreInfo">
+                    <span className="label">Mais informações</span>
+                    <span className="arrow"><Arrow/></span>
+                </div>
             </div>
         </BasicLayout>
     );

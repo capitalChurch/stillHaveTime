@@ -89,10 +89,8 @@
       
       .logo {
         text-align: center;
-
         svg {
           width: 70%;
-          
           transform: translateY(50%);
         }
       }
@@ -144,5 +142,54 @@
         }
       }
     }
+    @media only screen and (max-width: 420px){
+      height: auto;
+      justify-content: flex-start;
+      
+      .information{
+        flex-direction: column;
+        align-items: center;
+        
+        height: calc(#{$heightLayer} - #{$heightLogoChurch} - #{$paddingLayoutMobile});
+  
+        .logo {
+          width: auto;
+          height: auto;
+          svg {
+            transform: none;
+          }
+          padding: $paddingLayoutMobile 0;
+        }
+  
+        .text{
+          text-align: center;
+          font-size: $h3FontSizeMobile;
+          width: 75vw;
+          justify-content: space-around;
+
+          >*{
+            padding: 24px 0;
+          }
+          .actionButton{
+            font-size: $h4FontSizeMobile;
+          }
+        }
+      }
+      
+      .moreInfo{
+        transform: none;
+        height: calc(100vh - #{$heightLayer} - 8px);
+        display: flex;
+        align-items: center;
+      }
+    }
+
+
+    @media only screen and (max-height:560px) {
+      .information {
+        height: auto;
+      }
+    }
+
   }
 }
