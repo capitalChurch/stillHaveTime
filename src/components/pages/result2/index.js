@@ -2,21 +2,38 @@ import React from "react";
 import CleanLayout from "../../layouts/cleanLayout";
 
 import "./result2.scss";
+import {getMyRelation, getMySelf} from "../../../model/storage";
+import ResultCalc from "../../../model/calculate";
 
 
 export default function(props){
+    const myName = getMySelf().name;
+    const hisName = getMyRelation().name;
+    
+    const { years, months, days, hours, labelYear, labelMonth, labelDay, labelHour } = ResultCalc();
+
+    const showYears = !!years;
+    
     return(
         <CleanLayout className="result2">
             <div className="wrapperResult2">
-                <p> João, se continuar tendo o mesmo tempo de relacionamento que tem com o João hoje, você terá</p>
+                <p> {myName}, se continuar tendo o mesmo tempo de relacionamento que tem com {hisName} hoje, você terá</p>
                 <div className="resultBar">
-                    <span>6anos</span>
+                    {showYears && [
+                        <span key={1}>{years}{labelYear}</span>,
+                        <div key={2} className="divider" />
+                    ]}
+                    
+                    <span>{months} {labelMonth}</span>
                     <div className="divider" />
-                    <span>3 meses</span>
-                    <div className="divider" />
-                    <span>8 dias</span>
+                    <span>{days} {labelDay}</span>
+                    
+                    {!showYears && [
+                        <div key={1} className="divider" />,
+                        <span key={2}>{hours} {labelHour}</span>
+                    ]}
                 </div>
-                <p>para mostrar o amor de Jesus a ele.</p>
+                <p>para mostrar o amor de Jesus.</p>
             </div>
         </CleanLayout>
     )

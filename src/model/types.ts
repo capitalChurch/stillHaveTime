@@ -51,3 +51,14 @@ export interface Defaults {
     birthDate: Date;
     hoursWhenTogether: number;
 }
+
+export interface ResultCalcDates{
+    years: number;
+    months: number;
+    days: number;
+    hours: number;
+    labelYear: string;
+    labelMonth: string;
+    labelDay: string;
+    labelHour: string;
+}
