@@ -62,3 +62,16 @@ export interface ResultCalcDates{
     labelDay: string;
     labelHour: string;
 }
+
+export interface Rotas {
+    type: EnumRotas;
+    path: string;
+    component: any;
+}
+
+export enum EnumRotas {
+    Back,
+    Home, Home2, WhatIfJesusComeBack, Result, Result2, ShareResult, ShareResult2, BirthDate, Info, YourName,
+    YourAge, YourCity, HisAge, HisCity, HisName, Relation, FamiliarRelation, VacationTogether, TimeVacationTogether,
+    RegularTimeTogether, TimesSeenEachOther, ThinkingInSomeOne, PressPlay, Calculates
+}

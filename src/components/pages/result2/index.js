@@ -27,7 +27,7 @@ export default function(props){
                     <span>{months} {labelMonth}</span>
                     <div className="divider" />
                     <span>{days} {labelDay}</span>
-                    
+
                     {!showYears && [
                         <div key={1} className="divider" />,
                         <span key={2}>{hours} {labelHour}</span>

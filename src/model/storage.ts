@@ -1,7 +1,9 @@
-import {defaults, keyStorage} from "./constants";
+import {defaults} from "./constants";
 import {AllData, EnumRelation, EnumTypeRegularTime, Person, TimeRelation} from "./types";
 
 import moment from 'moment';
+
+const keyStorage = "youStillHaveTime";
 
 const getAllData = (): AllData => JSON.parse(sessionStorage.getItem(keyStorage) || "null") || initializeStorage(() => (getAllData() as AllData));
 const insertAllData = <T>(obj: AllData, callBack: () =>  T | void = () => {}): T | void => {

@@ -4,8 +4,11 @@ import LogoChurch from "../../utils/logoChurch";
 import {ReactComponent as Arrow} from "../../../assets/images/arrow.svg";
 
 import "./home2.scss";
+import {EnumRotas} from "../../../model/types";
+import {changeRoute} from "../../../model/constants";
 
 export default class Home2 extends Component {
+    goesHome = () => changeRoute(this.props, EnumRotas.Home);
     render = () => {
         return (
             <Fragment>
@@ -13,7 +16,7 @@ export default class Home2 extends Component {
                 <div className="home2">
                     <div className="topBar">
                         <LogoChurch />
-                        <div className="btnVoltar">
+                        <div className="btnVoltar" onClick={this.goesHome}>
                             <span>voltar</span>
                             <Arrow />
                         </div>
