@@ -4,6 +4,7 @@ import Background from "../../../assets/images/background/address_bg.png";
 import InputText from "../../utils/inputText";
 import "./yourCity.scss";
 import {getMySelf, saveMyCity} from "../../../model/storage";
+import {EnumRotas} from "../../../model/types";
 
 export default class YourAddress extends React.Component{
     state = {
@@ -19,7 +20,7 @@ export default class YourAddress extends React.Component{
         const {name, age} = getMySelf();
         
         return (
-            <PictureLayout colorLayer="blue" className="yourCity" bgImage={Background}>
+            <PictureLayout colorLayer="blue" className="yourCity" bgImage={Background} nextPage={EnumRotas.ThinkingInSomeOne}>
                 <div className="firstColumn">
                     <span className="title">Onde você<br/>mora?</span>
                     <span className="item">{name}</span>

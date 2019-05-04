@@ -12,10 +12,12 @@
     }
   }
   
-  .wrapperBackButton{
+  .wrapperBackButton, .wrapperForwardButton{
     z-index: 3;
-    .backButton .text span{
-      color: white;
+    .backButton, .forwardButton {
+      .text span {
+        color: white;
+      }
     }
   }
 
@@ -61,6 +63,5 @@
       
       min-height: calc(#{$heightLayer} - #{$heightLogoChurch} - #{$paddingLayout});
     }
-  }
-  
+  }  
 }

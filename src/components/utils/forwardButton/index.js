@@ -1,26 +1,25 @@
 import React from "react";
-import "./backButton.scss";
+import "./forwardButton.scss";
 
 import { ReactComponent as Arrow} from "../../../assets/images/arrow.svg";
-import {EnumRotas} from "../../../model/types";
 import {changeRoute} from "../../../model/constants";
 import {withRouter} from "react-router-dom";
 
-function backButton(props){
+function forwardButton(props){
     const style = props.style || "accent";
-    const goesBack = () => changeRoute(props, EnumRotas.Back);
+    const goesTo = () => changeRoute(props, props.nextPage);
     return (
-        <div className="wrapperBackButton" onClick={goesBack}>
-            <div className={`backButton ${style}`}>
+        <div className="wrapperForwardButton" onClick={goesTo}>
+            <div className={`forwardButton ${style}`}>
                 <div className="icon">
-                    <Arrow className="arrowBack"/>
+                    <Arrow className="arrowForward"/>
                 </div>
                 <div className="text">
-                    <span>voltar</span>
+                    <span>avançar</span>
                 </div>
             </div>
         </div>
     )
 }
 
-export default withRouter(backButton);
+export default withRouter(forwardButton);

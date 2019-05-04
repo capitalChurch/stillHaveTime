@@ -1,5 +1,6 @@
 import React from 'react';
 import BackButton from "../../utils/backButton";
+import ForwardButton from "../../utils/forwardButton";
 import LogoChurch from "../../utils/logoChurch";
 import Logo from "../../utils/logo";
 import Square from "../../utils/square";
@@ -16,6 +17,7 @@ export default function(props){
                 <Square style={styleComponents}/>
             </div>
             <BackButton style={styleComponents}/>
+            {!!props.nextPage && (<ForwardButton nextPage={props.nextPage} style={styleComponents}/>)}
             <div className="bodyLayout">
                 {props.children}
             </div>

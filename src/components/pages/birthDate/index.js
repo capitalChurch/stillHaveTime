@@ -4,6 +4,7 @@ import BirthDateBg from "../../../assets/images/background/birthDate_bg.png";
 
 import "./birthDate.scss";
 import {getMySelf, saveMyBirthDate} from "../../../model/storage";
+import {EnumRotas} from "../../../model/types";
 
 export default class BirthDate extends React.Component{
     state = {
@@ -24,7 +25,7 @@ export default class BirthDate extends React.Component{
         
         this.setState({date});
     }
-
+    
     handleChange = prop => e => {
         const value = parseInt(e.target.value, 10);
         
@@ -44,7 +45,7 @@ export default class BirthDate extends React.Component{
         const {day, month, year} = this.state.date;
         const l = val => val.toString();
         return(
-            <PictureLayout className="birthDate" bgImage={BirthDateBg} colorLayer="blue">
+            <PictureLayout className="birthDate" bgImage={BirthDateBg} colorLayer="blue" nextPage={EnumRotas.YourName}>
                 <span>Qual é a sua <br/> data de nascimento?</span>
                 <div className="form">
                     <input type="number" value={l(day)} onChange={this.handleChange("day")} />

@@ -1,19 +1,18 @@
 @import "../../../theme";
 
-.wrapperBackButton{
+.wrapperForwardButton{
   position: absolute;
   top: 50%;
-  left: 24px;
+  right: 3px;
   transform: translateY(-50%);
-  
-  
-  .backButton{
+
+  .forwardButton{
     width: 100%;
     display: flex;
     flex-direction: column;
 
     cursor: pointer;
-    
+
     &:hover{
       transform: scaleX(1.1);
     }
@@ -21,33 +20,29 @@
     >*{
       padding: 0 24px;
     }
-    
+
     .text{
       span{
-
         writing-mode: vertical-rl;
-        text-orientation: sideways;
-        transform: rotate(180deg);
-
+        text-orientation: mixed;
+        
         text-transform: uppercase;
         color: $primaryColor;
         font-family: $familySecundary;
         cursor: pointer;
       }
     }
-    
-    .icon{
-      .arrowBack{
-        height: 25px;
-        transform: rotate(90deg);
-    
-        .cls-1{
-          fill: $accentColor;
-        }
+
+    .icon .arrowForward{
+      height: 25px;
+      transform: rotate(270deg);
+
+      .cls-1{
+        fill: $accentColor;
       }
     }
-    
-    &.primary .icon .arrowBack .cls-1{
+
+    &.primary .icon .arrowForward .cls-1{
       fill: $primaryColor;
     }
   }
