@@ -5,6 +5,7 @@ import ChooseNumber from "../../utils/chooseNumber";
 
 import "./regularTimeTogether.scss";
 import {getTimeSpend, saveHoursWhenTogether} from "../../../model/storage";
+import {EnumRotas} from "../../../model/types";
 
 export default class RegularTimeTogether extends React.Component{
     state = {
@@ -17,7 +18,7 @@ export default class RegularTimeTogether extends React.Component{
     
     render = () => {
         return (
-            <PictureLayout className="regularTimeTogether" colorLayer="yellow" bgImage={Background}>
+            <PictureLayout className="regularTimeTogether" colorLayer="yellow" bgImage={Background} nextPage={EnumRotas.Calculates}>
                 <div className="firstColumn">
                     <span className="title">Quando estão no mesmo lugar, quantas horas passam juntos?</span>
                 </div>

@@ -4,11 +4,16 @@ import PictureLayer from "../../layouts/pictureLayout";
 import Background from "../../../assets/images/background/ferias_color_bg.png";
 import "./vacationTogether.scss";
 import {getMyRelation, getRelation, saveHasVacation} from "../../../model/storage";
-import {typesRelations} from "../../../model/constants";
+import {changeRoute, typesRelations} from "../../../model/constants";
+import {EnumRotas} from "../../../model/types";
+import {formatBeautiful} from "../../../model/utils";
 
 export default class VacationTogether extends React.Component{
     
-    handleChangeOption = hasVacation => saveHasVacation(hasVacation);
+    handleChangeOption = hasVacation => {
+        saveHasVacation(hasVacation);
+        changeRoute(this.props, hasVacation ? EnumRotas.TimeVacationTogether : EnumRotas.TimesSeenEachOther);
+    };
     
     render = () => {
         const {name, age, city} = getMyRelation();
@@ -24,9 +29,9 @@ export default class VacationTogether extends React.Component{
                 <div className="firstColumn">
                     <span className="title">Vocês passam <br /> as férias juntos?</span>
                     <div className="itens">
-                        <span className="item">{name}</span>
+                        <span className="item">{formatBeautiful(name)}</span>
                         <span className="item">{age}</span>
-                        <span className="item">{city}</span>
+                        <span className="item">{formatBeautiful(city)}</span>
                         {labelSuperiorRelation && (<span className="item">{labelSuperiorRelation}</span>)}
                         <span className="item">{labelRelation}</span>
                     </div>

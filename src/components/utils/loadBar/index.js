@@ -2,26 +2,28 @@ import React from "react";
 import {withRouter} from "react-router-dom";
 import "./loadBar.scss";
 import {changeRoute} from "../../../model/constants";
+import moment from "moment";
 
 class LoadBar extends React.Component{
     state = {
-        percentTimesTen: 0
+        startDate: null
     };
     
-    componentWillMount = () => this.updateTimer(0);
+    componentWillMount = () => this.setState({startDate: moment()}, this.updateTimer);
     
-    updateTimer = percentTimesTen => {
-        if(percentTimesTen === 1000){
+    timePass = () => moment().diff(this.state.startDate, "milliseconds");
+    
+    updateTimer = () => {
+        if(this.timePass() / 1000 > this.props.time){
             changeRoute(this.props, this.props.page);
             return;
         }
         
-        this.setState({percentTimesTen}, () => setTimeout(() => this.updateTimer(++percentTimesTen), this.props.time))
+        this.setState({}, () => setTimeout(this.updateTimer, 10))
     };
 
     render = () => {
-        const {percentTimesTen} = this.state;
-        const size = percentTimesTen === 1000 ? 0 : percentTimesTen / 10;
+        const size = this.timePass() / (this.props.time * 10);
         return (
             <span className="loadBar" style={{width: `${size}vw`}}/>
         )

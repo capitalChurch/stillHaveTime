@@ -4,6 +4,8 @@ import CleanLayout from "../../layouts/cleanLayout";
 import "./result2.scss";
 import {getMyRelation, getMySelf} from "../../../model/storage";
 import ResultCalc from "../../../model/calculate";
+import {formatBeautiful} from "../../../model/utils";
+import {EnumRotas} from "../../../model/types";
 
 
 export default function(props){
@@ -15,9 +17,9 @@ export default function(props){
     const showYears = !!years;
     
     return(
-        <CleanLayout className="result2">
+        <CleanLayout className="result2" nextPage={EnumRotas.ShareResult}>
             <div className="wrapperResult2">
-                <p> {myName}, se continuar tendo o mesmo tempo de relacionamento que tem com {hisName} hoje, você terá</p>
+                <p> {formatBeautiful(myName)}, se continuar tendo o mesmo tempo de relacionamento que tem com {formatBeautiful(hisName)} hoje, você terá</p>
                 <div className="resultBar">
                     {showYears && [
                         <span key={1}>{years}{labelYear}</span>,

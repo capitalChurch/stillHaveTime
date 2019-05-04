@@ -6,6 +6,7 @@ import Background from "../../../assets/images/background/address_color_bg.png";
 import "./hisCity.scss";
 import {getMyRelation, saveHisCity} from "../../../model/storage";
 import {EnumRotas} from "../../../model/types";
+import {formatBeautiful} from "../../../model/utils";
 
 export default class HisCity extends React.Component{
     state = {
@@ -22,7 +23,7 @@ export default class HisCity extends React.Component{
             <PictureLayout bgImage={Background} className="hisCity" colorLayer="yellow" nextPage={EnumRotas.Relation}>
                 <div className="firstColumn">
                     <span className="title">Onde essa<br/>pessoa mora?</span>
-                    <span className="item">{name}</span>
+                    <span className="item">{formatBeautiful(name)}</span>
                     <span className="item">{age}</span>
                 </div>
                 <div className="secondColumn">

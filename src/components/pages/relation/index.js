@@ -7,6 +7,7 @@ import "./relation.scss";
 import {getMyRelation, getRelation, saveRelation} from "../../../model/storage";
 import {changeRoute, typesRelations} from "../../../model/constants";
 import {EnumRotas} from "../../../model/types";
+import {formatBeautiful} from "../../../model/utils";
 
 export default class Relation extends React.Component{
     state = {
@@ -38,9 +39,9 @@ export default class Relation extends React.Component{
                 <div className="firstColumn">
                     <span className="title">Qual é a relação<br/>que você tem<br />com essa pessoa?</span>
                     <div className="itens">
-                        <span className="item">{name}</span>
+                        <span className="item">{formatBeautiful(name)}</span>
                         <span className="item">{age}</span>
-                        <span className="item">{city}</span>
+                        <span className="item">{formatBeautiful(city)}</span>
                     </div>
                 </div>
                 <div className="secondColumn">

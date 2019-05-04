@@ -5,6 +5,7 @@ import ChooseNumber from "../../utils/chooseNumber";
 
 import "./timeVacationTogether.scss";
 import {getTimeSpend, saveDaysVacation} from "../../../model/storage";
+import {EnumRotas} from "../../../model/types";
 
 export default class TimeVacationTogether extends React.Component{
     state = {
@@ -17,7 +18,7 @@ export default class TimeVacationTogether extends React.Component{
     
     render = () => {
         return (
-            <PictureLayout className="timeVacationTogether" bgImage={Background} colorLayer="yellow">
+            <PictureLayout className="timeVacationTogether" bgImage={Background} colorLayer="yellow" nextPage={EnumRotas.TimesSeenEachOther}>
                 <span className="labelTitle">Vocês passam as férias juntos?</span>
                 <div className="firstColumn">
                     <span className="title">Quantos dias <br /> ao ano?</span>

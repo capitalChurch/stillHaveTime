@@ -6,6 +6,7 @@ import {getMySelf, saveMyAge} from "../../../model/storage";
 
 import "./yourAge.scss";
 import {EnumRotas} from "../../../model/types";
+import {formatBeautiful} from "../../../model/utils";
 
 export default class YourAge extends React.Component{
     state = {
@@ -22,7 +23,7 @@ export default class YourAge extends React.Component{
             <PictureLayout colorLayer="blue" bgImage={AgeBg} className="age" nextPage={EnumRotas.YourCity}>
                 <div className="firstColumn">
                     <span className="title">Qual é a<br/>sua idade?</span>
-                    <span className="name">{name}</span>
+                    <span className="name">{formatBeautiful(name)}</span>
                 </div>
                 <div className="secondColumn">
                     <span className="age">{this.state.age}</span>

@@ -33,7 +33,7 @@ $paddingWidth: 50px;
   }
   
   .body{
-    width: calc(50% - #{$paddingWidth * 1.8});
+    width: calc(60% - #{$paddingWidth * 1.8});
     display: flex;
     flex-direction: column;
     padding-top: $paddingHeight;
@@ -49,6 +49,7 @@ $paddingWidth: 50px;
     
     p{
       color: $darkPrimaryColor;
+      margin: 12px 0;
     }
   }
   

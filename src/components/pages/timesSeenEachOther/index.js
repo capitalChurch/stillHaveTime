@@ -6,6 +6,7 @@ import {timesOptions} from "../../../model/constants";
 
 import "./timesSeenEachOther.scss";
 import {getTimeSpend, saveRegularTime, saveTimesPerEachEncounter} from "../../../model/storage";
+import {EnumRotas} from "../../../model/types";
 
 
 export default class RegularTimeTogether extends React.Component{
@@ -28,10 +29,10 @@ export default class RegularTimeTogether extends React.Component{
         const click = () => {
             const { regularTimeTogether } = this.state;
             
-            const numberTimes = regularTimeTogether >= opt.limit ? opt.limit : regularTimeTogether;
+            const numberTimes = (regularTimeTogether < opt.limit || !opt.limit) ? regularTimeTogether : opt.limit ;
             this.setState({ idTimes: opt.type, regularTimeTogether: numberTimes }, () => {
                 saveRegularTime(opt.type);
-                saveTimesPerEachEncounter(regularTimeTogether);
+                saveTimesPerEachEncounter(numberTimes);
             });
         };
         
@@ -40,11 +41,12 @@ export default class RegularTimeTogether extends React.Component{
     
     render = () => {
         const opt = timesOptions.find(x => x.type === this.state.idTimes);
+        const hasVacation = !!getTimeSpend().hasVacation;
         return (
-            <PictureLayout className="timesSeenEachOther" colorLayer="yellow" bgImage={Background}>
+            <PictureLayout className="timesSeenEachOther" colorLayer="yellow" bgImage={Background} nextPage={EnumRotas.RegularTimeTogether}>
                 <div className="firstColumn">
-                    <span className="firstLine">Além das férias,</span>
-                    <span className="secondLine">quantas vezes se veem?</span>
+                    {hasVacation && (<span className="firstLine">Além das férias,</span>)}
+                    <span className="secondLine">{hasVacation ? "q" : "Q" }uantas vezes se veem?</span>
                 </div>
                 <div className="secondColumn">
                     <span className="numberTimes">{this.state.regularTimeTogether} <small>x</small></span>

@@ -1,9 +1,19 @@
-import {defaults} from "./constants";
-import {AllData, EnumRelation, EnumTypeRegularTime, Person, TimeRelation} from "./types";
+import {AllData, Defaults, EnumRelation, EnumTypeRegularTime, Person, TimeRelation} from "./types";
 
 import moment from 'moment';
 
 const keyStorage = "youStillHaveTime";
+const defaults: Defaults = {
+    city: "Brasília",
+    birthDate: new Date("1990-08-01"),
+    daysInVacation: 12,
+    regularTime: EnumTypeRegularTime.mes,
+    timesPerEachEncounter: 6,
+    age: 28,
+    relation: EnumRelation.casal,
+    hoursWhenTogether: 3
+};
+
 
 const getAllData = (): AllData => JSON.parse(sessionStorage.getItem(keyStorage) || "null") || initializeStorage(() => (getAllData() as AllData));
 const insertAllData = <T>(obj: AllData, callBack: () =>  T | void = () => {}): T | void => {

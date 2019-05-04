@@ -24,7 +24,10 @@ export default class Home2 extends Component {
                     </div>
                     <div className="body">
                         <span className="title">O tempo<br />está passando...</span>
-                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</p>
+                        <p>O site Ainda dá tempo tem o objetivo de despertar a sua consciência para o fato de que existem pessoas ao redor que ainda não conhecem o amor de Jesus.</p>
+                        <p>Quanto tempo você ainda tem para mudar essa realidade? O que você tem feito em seu tempo de convivência com aqueles que ama? E se Jesus voltar amanhã?</p>
+                        <p>Ainda dá tempo!</p>
+                        <p>*O tempo estimado é baseado em um cálculo que envolve idade de sobrevida previamente definida e as idades informadas pelo usuário, podendo ser a da pessoa escolhida ou a dele mesmo.</p>
                     </div>
                     <div className="footer">
                         <div className="square" />

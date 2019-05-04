@@ -1,4 +1,4 @@
-import {Defaults, EnumRelation, EnumRotas, EnumTypeRegularTime, Rotas, TypesRegularTime, TypesRelation} from "./types";
+import {EnumRelation, EnumRotas, EnumTypeRegularTime, Rotas, TypesRegularTime, TypesRelation} from "./types";
 
 import Home from "../components/pages/home";
 import Home2 from "../components/pages/home2";
@@ -42,17 +42,6 @@ export const typesRelations: TypesRelation[] = [
     {type: EnumRelation.cunhado, typeSuperior: EnumRelation.familia, label: "Cunhado(a)"},
     {type: EnumRelation.genro, typeSuperior: EnumRelation.familia, label: "Genro/Nora"}
 ];
-
-export const defaults: Defaults = {
-    city: "Brasília",
-    birthDate: new Date("1990-08-01"),
-    daysInVacation: 12,
-    regularTime: EnumTypeRegularTime.mes,
-    timesPerEachEncounter: 6,
-    age: 28,
-    relation: EnumRelation.casal,
-    hoursWhenTogether: 3
-};
 
 export const timesOptions: TypesRegularTime[] = [
     {type: EnumTypeRegularTime.semana, label: "semana", limit: 7, qtyChange: 1 },

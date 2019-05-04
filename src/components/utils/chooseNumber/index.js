@@ -6,7 +6,7 @@ import "./chooseNumber.scss";
 export default class ChooseNumber extends React.Component{
 
     renderItem = i => {
-        const {value, changeNumber, qtyChange, limit} = this.props;
+        const {value, changeNumber, qtyChange} = this.props;
         let qtyToChange = qtyChange || 10;
         
         const style = Math.floor(value/qtyToChange) === i + 1 ? "active" : "";

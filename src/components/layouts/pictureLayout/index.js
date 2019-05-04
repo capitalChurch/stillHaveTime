@@ -9,7 +9,7 @@ export default function(props){
     };
     
     return(
-        <CleanLayout className={`${props.className} pictureLayout`} style={ layoutStyle } color={props.colorLayer} nextPage={props.nextPage}>
+        <CleanLayout className={`${props.className} pictureLayout`} style={ layoutStyle } color={props.colorLayer} nextPage={props.nextPage} hideForward={props.hideForward} time={props.time}>
             <div className={`${props.colorLayer} gatinho`} />
             <div className={`${props.colorLayer} bodyLayoutPicture`} >
                 {props.children}    
