@@ -61,5 +61,43 @@
       transform: translateY(-100%);
     }
   }
+  
+  @media only screen and (max-width: $maxWidthMobile){
+    .arrow{
+      height: 16px;
+    }
+    
+    .firstLine, .thirdLine{
+      height: 26px;
+      span{
+        padding: 0 8px;
+      }
+      svg{
+        padding: 8px 10px;
+      }
+    }
+    
+    .firstLine, .secondLine, .thirdLine{
+      font-size: $h2FontSizeMobile;
+      line-height: $h2FontSizeMobile;
 
+      span{
+        font-size: $h2FontSizeMobile;
+        line-height: $h2FontSizeMobile;
+      }
+    }
+
+    .firstLine .wrapperText{
+      transform: translateY(-70%);
+    }
+    
+    .thirdLine {
+      span{
+        transform: translateY(20%);
+      }
+      svg {
+        transform: translateY(-10%);
+      }
+    }
+  }
 }

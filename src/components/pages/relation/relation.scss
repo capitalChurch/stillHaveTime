@@ -52,5 +52,55 @@
         padding: 8px 0;
       }
     }
+
+    @media only screen and (max-width: $maxWidthMobile){
+      flex-direction: column;
+
+      .firstColumn{
+        padding: 0;
+        width: 100%;
+
+        .title {
+          font-size: $h2FontSizeMobile;
+          line-height: $h2FontSizeMobile;
+          text-align: center;
+        }
+
+        .itens{
+          display: none;
+        }
+        
+        .itens .item{
+          font-size: $h2FontSizeMobile;
+          line-height: $h2FontSizeMobile;
+          padding: 4px 0;
+        }
+      }
+
+      .secondColumn{
+        align-self: center;
+        width: auto;
+        padding: 8vh 0;
+        
+        .age{
+          font-size: $h1FontSizeMobile * 2;
+          line-height: $h1FontSizeMobile * 2;
+        }
+      }
+
+      @media only screen and (max-height: $maxHeihgtSmallDevices){
+        .firstColumn {
+          .title {
+            font-size: $h3FontSizeMobile;
+            line-height: $h3FontSizeMobile;
+          }
+
+          .itens .item {
+            font-size: $h4FontSizeMobile;
+            line-height: $h4FontSizeMobile;
+          }
+        }
+      }
+    }
   }
 }
