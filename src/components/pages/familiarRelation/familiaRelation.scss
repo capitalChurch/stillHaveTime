@@ -49,4 +49,35 @@
             }
         }
     }
+    
+    @media only screen and (max-width: $maxWidthMobile){
+        .bodyLayoutPicture {
+            flex-direction: column;
+            justify-content: flex-start;
+            
+            .chooseOne{
+                display: none;
+            }
+            
+            .title, .options{
+                width: 100%;
+            }
+            
+            .options{
+                padding-top: 16px;
+            }
+            
+            @media only screen and (max-height: $maxHeihgtSmallDevices){
+                .title {
+                    font-size: $h5FontSizeMobile;
+                    line-height: $h5FontSizeMobile;
+                }
+                .options {
+                    font-size: $h4FontSizeMobile;
+                    line-height: $h4FontSizeMobile;
+                }
+            }
+
+        }
+    }
 }
