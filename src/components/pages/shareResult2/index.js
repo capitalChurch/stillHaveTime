@@ -8,21 +8,23 @@ import {formatBeautiful} from "../../../model/utils";
 
 export default class ShareResult2 extends React.Component{
     state = {
-        showText: false
+        showText: true
     };
-    
-    componentDidMount() {
+
+    handleDownloadClick = () => this.setState({showText: false}, () => {
         const node = document.getElementById("root");
 
-        domToImage.toPng(node, { bgcolor: "white" })
-            .then((dataUrl) => {
-                let link = document.createElement('a');
-                link.download = `${formatBeautiful(getMySelf().name)} e ${formatBeautiful(getMyRelation().name)}.jpg`;
-                link.href = dataUrl;
+        domToImage.toBlob(node, { bgcolor: "white" })
+            .then(dataUrl => {
+                const url = window.URL.createObjectURL(dataUrl);
+                const link = document.createElement('a');
+                link.href = url;
+                link.setAttribute('download', `${formatBeautiful(getMySelf().name)} e ${formatBeautiful(getMyRelation().name)}.jpg`);
+                document.body.appendChild(link);
                 link.click();
                 this.setState({showText: true});
             });
-    }
+    });
 
     render = () => {
         const myName = getMySelf().name;
@@ -59,6 +61,11 @@ export default class ShareResult2 extends React.Component{
                         </div>
                     </div>
                 </div>
+                {this.state.showText && (
+                    <div className="buttonBar">
+                        <span onClick={this.handleDownloadClick}>Download</span>
+                    </div>
+                )}
             </CleanLayout>
         )
     }
