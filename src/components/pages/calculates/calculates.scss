@@ -33,8 +33,12 @@ $heightBackground: 75vh;
     background: $accentColor;
   }
 
-  .wrapperBackButton .backButton .text span{
-    color: white;
+  .wrapperBackButton {
+    z-index: 4;
+
+    .backButton .text span {
+      color: white;
+    }
   }
   
   .logo path{
