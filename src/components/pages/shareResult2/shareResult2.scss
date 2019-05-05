@@ -28,6 +28,10 @@
           color: black;
           font-size: $normalFontSize;
           line-height: ($normalFontSize * 1.6);
+          
+          b{
+            font-size: $normalFontSize + 2px;
+          }
         }
       }
       .score{
