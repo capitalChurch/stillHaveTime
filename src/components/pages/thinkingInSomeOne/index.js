@@ -8,7 +8,7 @@ export default class ThinkingInSomeOne extends Component{
     render = () => (
         <Fragment>
             <div className="gato" />
-            <CleanLayout className="thinkingInSomeOne" color="yellow" nextPage={EnumRotas.HisName} time={20}>
+            <CleanLayout className="thinkingInSomeOne" color="yellow" nextPage={EnumRotas.HisName}>
                 <span>Agora pense em alguém que você ame e que precise conhecer do amor de Jesus</span>
             </CleanLayout>
         </Fragment>

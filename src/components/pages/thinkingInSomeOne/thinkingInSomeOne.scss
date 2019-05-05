@@ -5,7 +5,7 @@
   top: 0;
   right: 0;
   width: 38%;
-  height: 75vh;
+  height: $heightLayer;
   background: $accentColor;
 }
 
@@ -17,12 +17,16 @@
       fill: white;
     }
   }
-  .wrapperBackButton .backButton.primary {
-    .text span{
-      color: white;
-    }
-    .icon .arrowBack polygon.cls-1 {
-      fill: $accentColor;
+  
+  .wrapperBackButton, .wrapperForwardButton{
+    .primary {
+      .text span {
+        color: white;
+      }
+
+      .icon .arrowBack polygon.cls-1 {
+        fill: $accentColor;
+      }
     }
   }
   
@@ -37,6 +41,40 @@
       font-family: $familySecundary;
       font-size: $h2FontSize;
       line-height: $h2FontSize;
+    }
+  }
+}
+
+
+@media only screen and (max-width: $maxWidthMobile){
+  $heightYellowLayer: 60vh;
+  
+  .gato{
+    height: $heightYellowLayer;
+  }
+  
+  .thinkingInSomeOne {
+    .bodyLayout {
+      width: 43vw;
+      padding: $paddingLayoutMobile 0 $paddingLayoutMobile 24px;
+      position: relative;
+      top: unset;
+      
+      span {
+        font-size: $h2FontSizeMobile;
+        line-height: $h2FontSizeMobile;
+      }
+    }
+    .footer{
+      z-index: 3
+    }
+    
+    .wrapperForwardButton{
+      top: $heightYellowLayer;
+      
+      .forwardButton .icon .arrowForward .cls-1{
+        fill: $accentColor;
+      }
     }
   }
 }
