@@ -52,10 +52,6 @@
         align-self: center;
         margin-top: 8vh;
         width: auto;
-        .age{
-          font-size: $h1FontSizeMobile * 2;
-          line-height: $h1FontSizeMobile * 2;
-        }
       }
 
       @media only screen and (max-height: $maxHeihgtSmallDevices){

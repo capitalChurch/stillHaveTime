@@ -10,12 +10,9 @@
     display: flex;
     flex-wrap: wrap;
     align-self: center;
-
-    >*{
-      padding: 0 90px;
-    }
-
+    
     .labelTitle{
+      padding-left: 90px;
       width: $sizeWidth;
       color: #ffffffbb;
       font-family: $familySecundary;
@@ -27,6 +24,10 @@
       >*{
         display: block;
       }
+      
+      padding-left: 90px;
+      
+      width: 40%;
 
       font-family: $familySecundary;
 
@@ -41,11 +42,12 @@
     }
 
     .secondColumn{
-
       display: flex;
       flex-direction: column;
       align-items: center;
       transform: translateY(-30px);
+      width: calc(100vw - 45% - 180px);
+      
       .numberTimeVacation{
         font-size: $h1FontSize * 2;
         line-height: $h1FontSize * 2;
@@ -54,6 +56,74 @@
 
       >*{
         padding: 8px 0;
+      }
+    }
+
+    @media only screen and (max-width: $maxWidthMobile){
+      flex-direction: column;
+
+      .labelTitle{
+        width: 100%;
+        padding: 0;
+        font-size: $h4FontSizeMobile;
+        line-height: $h4FontSizeMobile;
+      }
+      
+      .firstColumn{
+        padding: 16px 0;
+        width: 100%;
+
+        .title {
+          font-size: $h2FontSizeMobile;
+          line-height: $h2FontSizeMobile;
+        }
+
+        .itens {
+          flex-direction: row;
+          justify-content: center;
+          flex-wrap: wrap;
+          .item {
+            font-size: $h3FontSizeMobile;
+            line-height: $h3FontSizeMobile;
+            padding: 4px 8px;
+          }
+        }
+      }
+
+      .secondColumn{
+        align-self: center;
+        width: auto;
+        padding: 4vh 0;
+        
+        .numberTimeVacation{
+          font-size: $h2FontSize * 2;
+          line-height: $h2FontSize * 2;
+          color: $primaryColor;
+        }
+      }
+
+      @media only screen and (max-height: $maxHeihgtSmallDevices){
+        .firstColumn {
+          padding: 8px 0;
+          
+          .title {
+            font-size: $h3FontSizeMobile;
+            line-height: $h3FontSizeMobile;
+          }
+
+          .itens .item {
+            font-size: $h4FontSizeMobile;
+            line-height: $h4FontSizeMobile;
+          }
+        }
+        .secondColumn {
+          padding: 16px 0;
+          
+          .numberTimeVacation {
+            font-size: $h1FontSize;
+            line-height: $h1FontSize;
+          }
+        }
       }
     }
   }

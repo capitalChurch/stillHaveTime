@@ -21,7 +21,7 @@ export default class TimeVacationTogether extends React.Component{
             <PictureLayout className="timeVacationTogether" bgImage={Background} colorLayer="yellow" nextPage={EnumRotas.TimesSeenEachOther}>
                 <span className="labelTitle">Vocês passam as férias juntos?</span>
                 <div className="firstColumn">
-                    <span className="title">Quantos dias <br /> ao ano?</span>
+                    <span className="title">Quantos dias ao ano?</span>
                 </div>
                 <div className="secondColumn">
                     <span className="numberTimeVacation">{this.state.vacationTimeTogether}</span>
