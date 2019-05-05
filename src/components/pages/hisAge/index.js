@@ -1,7 +1,7 @@
 import React from "react";
 import PictureLayout from "../../layouts/pictureLayout";
 import ChooseNumber from "../../utils/chooseNumber";
-import Background from "../../../assets/images/background/age_color_bg.png"
+import Background from "../../../assets/images/background/age_color_bg.jpg"
 
 import "./hisAge.scss";
 import {getMyRelation, saveHisAge} from "../../../model/storage";

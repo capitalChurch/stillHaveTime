@@ -60,5 +60,51 @@
         background: $darkPrimaryColor;
       }
     }
+    
+    @media only screen and (max-width:$maxWidthMobile){
+      width: 100vw;
+      min-height: auto;
+      
+      .body{
+        flex-direction: column;
+        
+        .text{
+          width: auto;
+          >*{
+            padding: 0 24px;
+          }
+          .title{
+            font-size: $h2FontSizeMobile;
+            line-height: $h2FontSizeMobile;
+          }
+          .bodyText{
+            margin: 0;
+            >*{
+              margin: 12px 0;
+            }
+          }
+        }
+        
+        .wrapperScore{
+          margin: 0 48px;
+
+          .score{
+            margin: 8px 0;
+            padding: 8px 16px;
+          }
+        }
+      }
+      .buttonBar {
+        margin: 0 48px;
+        > * {
+          font-size: $h5FontSizeMobile;
+          line-height: $h5FontSizeMobile;
+
+          vertical-align: middle;
+
+          margin: 0 16px 0 0;
+        }
+      }
+    }
   }
 }

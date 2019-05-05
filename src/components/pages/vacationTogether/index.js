@@ -1,7 +1,7 @@
 import React from "react";
 import PictureLayer from "../../layouts/pictureLayout";
 
-import Background from "../../../assets/images/background/ferias_color_bg.png";
+import Background from "../../../assets/images/background/ferias_color_bg.jpg";
 import "./vacationTogether.scss";
 import {getMyRelation, getRelation, saveHasVacation} from "../../../model/storage";
 import {changeRoute, typesRelations} from "../../../model/constants";

@@ -2,7 +2,7 @@ import React from "react";
 import PictureLayout from "../../layouts/pictureLayout";
 import InputText from '../../utils/inputText'
 
-import BackGround from "../../../assets/images/background/name_bg.png";
+import BackGround from "../../../assets/images/background/name_bg.jpg";
 import "./yourName.scss";
 import {getMySelf, saveMyName} from "../../../model/storage";
 import {EnumRotas} from "../../../model/types";

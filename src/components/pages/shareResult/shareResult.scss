@@ -31,5 +31,12 @@
         background: $hoverDarkPrimaryColor;
       }
     }
+    
+    @media only screen and (max-width: $maxWidthMobile){
+      p{
+        font-size: $h1FontSize;
+        line-height: $h1FontSize * 0.8;
+      }
+    }
   }
 }

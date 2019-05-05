@@ -13,7 +13,11 @@ export default function(props){
             <div className="body">
                 <div className="text">
                     <span className="title">{myName} <span className="accent">e</span><br />{hisName}</span>
-                    <span className="bodyText">It is a long established fact that a reader will be distracted by of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</span>
+                    <span className="bodyText">
+                        <p>Você ainda tem tempo para falar do amor de Jesus pra quem você ama, mas Jesus pode voltar ainda hoje.</p>
+                        <p>Otimize seu tempo e invista em amor, cuidado e conversas de qualidade.</p>
+                        <p>Assuma sua responsabilidade. Que Deus te abennçoe!</p>
+                    </span>
                 </div>
                 <div className="wrapperScore">
                     <div className="score">
@@ -29,7 +33,6 @@ export default function(props){
                 </div>
             </div>
             <div className="buttonBar">
-                <span>facebook</span>
                 <span>E-mail</span>
                 <span>Whatsapp</span>
             </div>

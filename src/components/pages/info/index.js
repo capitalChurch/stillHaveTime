@@ -1,6 +1,6 @@
 import React from "react";
 import PictureLayout from "../../layouts/pictureLayout";
-import BebeBg from "../../../assets/images/background/birthDate_bg.png";
+import BebeBg from "../../../assets/images/background/birthDate_bg.jpg";
 
 import "./info.scss";
 import {EnumRotas} from "../../../model/types";

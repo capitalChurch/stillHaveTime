@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import CleanLayout from "../../layouts/cleanLayout";
-import Background from "../../../assets/images/background/crowd_bg.png";
+import Background from "../../../assets/images/background/crowd_bg.jpg";
 
 import {ReactComponent as PlayArrow} from "../../../assets/images/play.svg";
 

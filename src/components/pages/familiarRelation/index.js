@@ -1,7 +1,7 @@
 import React from "react";
 import PictureLayout from "../../layouts/pictureLayout";
 import ChooseOne from "../../utils/chooseOne";
-import Background from "../../../assets/images/background/relacao_familia_color_bg.png";
+import Background from "../../../assets/images/background/relacao_familia_color_bg.jpg";
 import * as constants from "../../../model/constants";
 import {EnumRelation, EnumRotas} from "../../../model/types";
 

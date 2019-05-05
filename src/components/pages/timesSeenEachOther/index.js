@@ -1,6 +1,6 @@
 import React from "react";
 import PictureLayout from "../../layouts/pictureLayout";
-import Background from "../../../assets/images/background/vezesquesevem_color_bg.png";
+import Background from "../../../assets/images/background/vezesquesevem_color_bg.jpg";
 import ChooseNumber from "../../utils/chooseNumber";
 import {timesOptions} from "../../../model/constants";
 

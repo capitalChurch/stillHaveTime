@@ -2,7 +2,7 @@ import React from "react";
 import PictureLayout from "../../layouts/pictureLayout";
 import InputText from '../../utils/inputText'
 
-import BackGround from "../../../assets/images/background/name_color_bg.png";
+import BackGround from "../../../assets/images/background/name_color_bg.jpg";
 import "./hisName.scss";
 import {getMyRelation, saveHisName} from "../../../model/storage";
 import {EnumRotas} from "../../../model/types";

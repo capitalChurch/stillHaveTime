@@ -1,5 +1,5 @@
 import React, {Component, Fragment} from "react";
-import Background from "../../../assets/images/background/calcular_color_bg.png";
+import Background from "../../../assets/images/background/calcular_color_bg.jpg";
 import CleanLayout from "../../layouts/cleanLayout";
 import {EnumRotas} from "../../../model/types";
 import {changeRoute} from "../../../model/constants";

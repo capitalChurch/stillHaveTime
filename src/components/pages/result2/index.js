@@ -17,7 +17,7 @@ export default function(props){
     const showYears = !!years;
     
     return(
-        <CleanLayout className="result2">
+        <CleanLayout className="result2" nextPage={EnumRotas.ShareResult}>
             <div className="wrapperResult2">
                 <p>{formatBeautiful(myName)}, se continuar tendo o mesmo tempo de relacionamento que tem com {formatBeautiful(hisName)} hoje, você terá</p>
                 <div className="resultBar">

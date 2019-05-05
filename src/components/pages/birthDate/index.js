@@ -1,6 +1,6 @@
 import React from "react";
 import PictureLayout from "../../layouts/pictureLayout";
-import BirthDateBg from "../../../assets/images/background/birthDate_bg.png";
+import BirthDateBg from "../../../assets/images/background/birthDate_bg.jpg";
 
 import "./birthDate.scss";
 import {getMySelf, saveMyBirthDate} from "../../../model/storage";
