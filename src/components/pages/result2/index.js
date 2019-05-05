@@ -19,7 +19,7 @@ export default function(props){
     return(
         <CleanLayout className="result2" nextPage={EnumRotas.ShareResult}>
             <div className="wrapperResult2">
-                <p> {formatBeautiful(myName)}, se continuar tendo o mesmo tempo de relacionamento que tem com {formatBeautiful(hisName)} hoje, você terá</p>
+                <p>{formatBeautiful(myName)}, se continuar tendo o mesmo tempo de relacionamento que tem com {formatBeautiful(hisName)} hoje, você terá</p>
                 <div className="resultBar">
                     {showYears && [
                         <span key={1}>{years}{labelYear}</span>,

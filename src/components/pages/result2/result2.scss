@@ -42,5 +42,33 @@
         padding: 0 8px;
       }
     }
+
+    @media only screen and (max-width: $maxWidthMobile){
+      .wrapperResult2 {
+        width: 100%;
+      
+        p {
+          font-size: $h25FontSizeMobile;
+          line-height: $h25FontSizeMobile;
+          text-align: center;
+          padding: 0 16px;
+        }
+        
+        .resultBar{
+          width: 80vw;
+          margin: 0;
+          padding: 8px 16px;
+          span{
+            font-size: $h3FontSizeMobile;
+          }
+
+          .divider{
+            background: white;
+            min-height: $h3FontSizeMobile * 1.5;
+            min-width: $h3FontSizeMobile / 2.5;
+          }
+        }
+      }
+    }  
   }
 }
