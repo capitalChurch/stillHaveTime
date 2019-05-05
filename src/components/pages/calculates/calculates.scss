@@ -58,13 +58,27 @@ $heightBackground: 75vh;
   
   .firstPart{
     color: $primaryColor;
-    font-size: $h1FontSize * 2;
-    line-height: $h1FontSize * 2;
   }
   
   .secondPart{
     color: #eee;
+  }
+
+  .firstPart, .secondPart{
     font-size: $h1FontSize * 2;
-    line-height: $h1FontSize * 2;
+    line-height: $h1FontSize * 2;    
+  }
+  
+  @media only screen and (max-width: $maxWidthMobile){
+    .bodyLayout {
+      align-items: center;
+      
+      .firstPart, .secondPart {
+        $sizeFont: $h2FontSizeMobile * 2;
+        font-size: $sizeFont ;
+        line-height: $sizeFont;
+        transform: translateY(-50%);
+      }
+    }
   }
 }
