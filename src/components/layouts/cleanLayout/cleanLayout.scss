@@ -33,8 +33,7 @@
   .footer{
     justify-content: flex-end;
   }
-
-  @media only screen and (max-width: 420px){
+  @media only screen and (max-width: $maxWidthMobile){
     padding: $paddingLayoutMobile;
   
     height: 86.4vh;//calc(100vh - #{$paddingLayoutMobile * 4} - 1vh);
@@ -48,6 +47,16 @@
       >*{
         font-size: $h1FontSizeMobile;
         line-height: $h1FontSizeMobile;
+      }
+    }
+
+    @media only screen and (max-height: $maxHeihgtSmallDevices) {
+      .bodyLayout {
+        min-height: calc(100vh - #{($paddingLayoutMobile * 7)} - #{$heightLogoChurchSmallDevices} - #{$heightLogo});
+      }
+
+      .logoChurch{
+        height: $heightLogoChurchSmallDevices;
       }
     }
   }

@@ -15,7 +15,7 @@
       padding: 0 24px;
     }
 
-    @media only screen and (max-width: 420px){
+    @media only screen and (max-width: $maxWidthMobile){
       flex-direction: column;
       justify-content: flex-start;
 

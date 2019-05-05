@@ -97,7 +97,7 @@ $paddingWidth: 25px;
   }
 }
 
-@media only screen and (max-width: 420px){
+@media only screen and (max-width: $maxWidthMobile){
   .home2{
     .topBar{      
       align-items: center;

@@ -142,7 +142,8 @@
         }
       }
     }
-    @media only screen and (max-width: 420px){
+    
+    @media only screen and (max-width: $maxWidthMobile){
       height: auto;
       justify-content: flex-start;
       
@@ -185,11 +186,10 @@
     }
 
 
-    @media only screen and (max-height:560px) {
+    @media only screen and (max-height: $maxHeihgtSmallDevices) {
       .information {
         height: auto;
       }
     }
-
   }
 }

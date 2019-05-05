@@ -47,10 +47,10 @@
     }
   }
 
-  @media only screen and (max-width: 420px) {
+  @media only screen and (max-width: $maxWidthMobile) {
     top: $heightLayer;
 
-    @media only screen and (max-height: 600px){
+    @media only screen and (max-height: $maxHeihgtSmallDevices){
       top: $heightLayerSmallMobile;
     }
     

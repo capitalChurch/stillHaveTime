@@ -22,7 +22,7 @@ export default class YourAge extends React.Component{
         return (
             <PictureLayout colorLayer="blue" bgImage={AgeBg} className="age" nextPage={EnumRotas.YourCity}>
                 <div className="firstColumn">
-                    <span className="title">Qual é a<br/>sua idade?</span>
+                    <span className="title">Qual é a sua idade?</span>
                     <span className="name">{formatBeautiful(name)}</span>
                 </div>
                 <div className="secondColumn">
