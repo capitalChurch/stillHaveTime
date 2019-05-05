@@ -5,11 +5,12 @@ import { ReactComponent as Arrow } from "../../../assets/images/arrow.svg";
 import "./home.scss";
 import { changeRoute } from "../../../model/constants";
 import { EnumRotas } from "../../../model/types";
+import {initializeStorage} from "../../../model/storage";
 
 export default function(props){
     
     const goToHome2 = () => changeRoute(props, EnumRotas.Home2);
-    const goToBirthDate = () => changeRoute(props, EnumRotas.BirthDate);
+    const goToBirthDate = () => initializeStorage(() => changeRoute(props, EnumRotas.BirthDate));
     
     return (
         <BasicLayout className="home">
