@@ -21,7 +21,7 @@ export default class YourAddress extends React.Component{
         const {name, age} = getMySelf();
         
         return (
-            <PictureLayout colorLayer="blue" className="yourCity" bgImage={Background} nextPage={EnumRotas.ThinkingInSomeOne}>
+            <PictureLayout colorLayer="blue" className="yourCity" bgImage={Background} nextPage={EnumRotas.ThinkingInSomeOne} btnForwardDisabled={!this.state.city}>
                 <div className="firstColumn">
                     <span className="title">Onde você<br/>mora?</span>
                     <span className="item">{formatBeautiful(name)}</span>

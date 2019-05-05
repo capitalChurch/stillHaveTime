@@ -17,7 +17,7 @@ export default class HisName extends React.Component{
     handleChange = name => this.setState({name}, () => saveHisName(name));
     
     render = () => (
-        <PictureLayout className="hisName" colorLayer="yellow" bgImage={BackGround} nextPage={EnumRotas.HisAge}>
+        <PictureLayout className="hisName" colorLayer="yellow" bgImage={BackGround} nextPage={EnumRotas.HisAge} btnForwardDisabled={!this.state.name}>
             <span>Qual é o nome<br/> dele(a)?</span>
             <div className="form">
                 <InputText value={this.state.name} color="blue" onChange={this.handleChange}/>

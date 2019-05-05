@@ -11,14 +11,30 @@
     display: flex;
     flex-direction: column;
 
-    cursor: pointer;
-
-    &:hover{
-      transform: scaleX(1.1);
+    &:not(.disabled) {
+      cursor: pointer;
+      
+      &:hover {
+        transform: scaleX(1.1);
+      }
+      
+      .text span{
+        cursor: pointer;
+      }
     }
     
     >*{
       padding: 0 24px;
+    }
+    
+    &.disabled{
+      .text span{
+        color: gray !important;
+      }
+
+      .icon .arrowForward .cls-1{
+        fill:  gray !important;
+      }
     }
 
     .text{
@@ -29,7 +45,6 @@
         text-transform: uppercase;
         color: $primaryColor;
         font-family: $familySecundary;
-        cursor: pointer;
       }
     }
 
@@ -63,18 +78,28 @@
       padding: 0;
     }
 
-    .forwardButton.primary .icon .arrowForward{
-      background: $primaryColor;
-      polygon.cls-1{
-        fill: $darkAccentColor;
+    .forwardButton{
+      &.primary:not(.disabled) .icon .arrowForward{
+        background: $primaryColor;
+        polygon.cls-1{
+          fill: $darkAccentColor;
+        }
       }
-    }
+      
+      &.accent:not(.disabled) .icon .arrowForward {
+        background: $accentColor;
 
-    .forwardButton.accent .icon .arrowForward{
-      background: $accentColor;
+        polygon.cls-1 {
+          fill: $darkPrimaryColor;
+        }
+      }
+      
+      &.disabled .icon .arrowForward {
+        background: #615f5f;
 
-      polygon.cls-1{
-        fill: $darkPrimaryColor;
+        polygon.cls-1 {
+          fill: darkgray;
+        }
       }
     }
     

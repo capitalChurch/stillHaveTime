@@ -6,6 +6,7 @@ import "./birthDate.scss";
 import {getMySelf, saveMyBirthDate} from "../../../model/storage";
 import {EnumRotas} from "../../../model/types";
 import {padStart} from "../../../model/utils";
+import {changeRoute} from "../../../model/constants";
 
 export default class BirthDate extends React.Component{
     state = {
@@ -38,9 +39,17 @@ export default class BirthDate extends React.Component{
         if(day > 31 || month > 12 || day < 0 || month < 0)
             return;
 
+
+        const isSubmit = e.key === "Enter";
         saveMyBirthDate(new Date(year, month - 1, day));
-        this.setState({date});
+        this.setState({date}, () => {
+            if(!isSubmit)
+                return;
+            
+            changeRoute(this.props, EnumRotas.YourName);
+        });        
     };
+    
     
     render = () => {
         const {day, month, year} = this.state.date;
@@ -49,11 +58,11 @@ export default class BirthDate extends React.Component{
             <PictureLayout className="birthDate" bgImage={BirthDateBg} colorLayer="blue" nextPage={EnumRotas.YourName}>
                 <span>Qual é a sua <br/> data de nascimento?</span>
                 <div className="form">
-                    <input type="number" value={l(day)} onChange={this.handleChange("day")} />
+                    <input type="number" value={l(day)} onKeyUp={this.handleChange("day")} onChange={this.handleChange("day")} />
                     <span className="slash" />
-                    <input type="number" value={l(month)} onChange={this.handleChange("month")} />
+                    <input type="number" value={l(month)} onKeyUp={this.handleChange("month")} onChange={this.handleChange("month")} />
                     <span className="slash" />
-                    <input type="number" value={year} onChange={this.handleChange("year")} />
+                    <input type="number" value={year} onKeyUp={this.handleChange("year")} onChange={this.handleChange("year")} />
                 </div>
             </PictureLayout>
         )

@@ -20,7 +20,7 @@ export default class HisCity extends React.Component{
     render = () => {
         const {name, age} = getMyRelation();
         return(
-            <PictureLayout bgImage={Background} className="hisCity" colorLayer="yellow" nextPage={EnumRotas.Relation}>
+            <PictureLayout bgImage={Background} className="hisCity" colorLayer="yellow" nextPage={EnumRotas.Relation} btnForwardDisabled={!this.state.city}>
                 <div className="firstColumn">
                     <span className="title">Onde essa<br/>pessoa mora?</span>
                     <span className="item">{formatBeautiful(name)}</span>

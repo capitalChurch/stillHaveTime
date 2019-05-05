@@ -7,10 +7,16 @@ import {withRouter} from "react-router-dom";
 
 function forwardButton(props){
     const style = props.style || "accent";
-    const goesTo = () => changeRoute(props, props.nextPage);
+    const goesTo = () => {
+        if(props.disabled)
+            return;
+        
+        changeRoute(props, props.nextPage);
+    };
+    
     return (
-        <div className="wrapperForwardButton" onClick={goesTo}>
-            <div className={`forwardButton ${style}`}>
+        <div className={`wrapperForwardButton`} onClick={goesTo}>
+            <div className={`forwardButton ${style}  ${props.disabled?"disabled":""}`}>
                 <div className="icon">
                     <Arrow className="arrowForward"/>
                 </div>

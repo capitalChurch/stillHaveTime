@@ -22,7 +22,7 @@ export default function(props){
             <div className="bodyLayout">
                 {props.children}
             </div>
-            {!!props.nextPage && !props.hideForward && (<ForwardButton nextPage={props.nextPage} style={styleComponents}/>)}
+            {!!props.nextPage && !props.hideForward && (<ForwardButton nextPage={props.nextPage} disabled={props.btnForwardDisabled} style={styleComponents}/>)}
             <div className="footer">
                 <Logo />
             </div>

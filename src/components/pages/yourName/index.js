@@ -1,11 +1,13 @@
 import React from "react";
 import PictureLayout from "../../layouts/pictureLayout";
 import InputText from '../../utils/inputText'
+import { getMySelf, saveMyName } from "../../../model/storage";
+import { EnumRotas } from "../../../model/types";
+import { changeRoute } from "../../../model/constants";
 
 import BackGround from "../../../assets/images/background/name_bg.jpg";
+
 import "./yourName.scss";
-import {getMySelf, saveMyName} from "../../../model/storage";
-import {EnumRotas} from "../../../model/types";
 
 export default class YourName extends React.Component{
     state = {
@@ -15,12 +17,15 @@ export default class YourName extends React.Component{
     componentWillMount = () => this.setState({name: getMySelf().name});
     
     handleChangeName = name => this.setState({name}, () => saveMyName(name));
+    
+    handleSubmit = () => changeRoute(this.props, EnumRotas.YourAge);
 
     render = () => (
-        <PictureLayout className="yourName" colorLayer="blue" bgImage={BackGround} nextPage={EnumRotas.YourAge}>
+        <PictureLayout className="yourName" colorLayer="blue" bgImage={BackGround} nextPage={EnumRotas.YourAge} btnForwardDisabled={!this.state.name}>
             <span>Qual é o<br/>seu nome?</span>
             <div className="form">
-                <InputText value={this.state.name} onChange={this.handleChangeName}/>
+                <InputText value={this.state.name} onChange={this.handleChangeName}
+                           handleSubmit={this.handleSubmit}/>
             </div>
         </PictureLayout>
     );
