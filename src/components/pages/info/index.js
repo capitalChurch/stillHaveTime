@@ -8,7 +8,7 @@ import {EnumRotas} from "../../../model/types";
 export default function(props){
     const white = texto => (<span className="accent">{texto}</span>);
     return (
-        <PictureLayout colorLayer="blue" bgImage={BebeBg} className="info" nextPage={EnumRotas.Result} hideForward={true}>
+        <PictureLayout colorLayer="blue" bgImage={BebeBg} className="info" nextPage={EnumRotas.Result} time={10} hideForward={true}>
             <p>Quanto {white("tempo")} terá para<br />{white("compartilhar")} do amor e da<br/>graça de {white("jesus")} para ela?"</p>
         </PictureLayout>
     )

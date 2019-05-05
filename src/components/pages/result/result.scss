@@ -1,7 +1,14 @@
+@import "../../../theme";
+
 .result{
    .bodyLayout{
      >*{
        padding: 0 8px;
+     }
+     
+     @media only screen and (max-width: $maxWidthMobile){
+       flex-direction: column;
+       align-items: center;
      }
    }
  }
