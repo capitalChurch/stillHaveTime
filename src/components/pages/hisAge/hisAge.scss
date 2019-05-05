@@ -47,5 +47,51 @@
         padding: 8px 0;
       }
     }
+
+    @media only screen and (max-width: 1024px) {
+      .firstColumn {
+        width: 47%;;
+      }
+      .secondColumn{
+        width: 53%;
+      }
+    }
+
+    @media only screen and (max-width: $maxWidthMobile){
+      flex-direction: column;
+
+      .firstColumn{
+        padding: 0;
+        width: 100%;
+
+        .name{
+          font-size: $h3FontSizeMobile;
+        }
+      }
+
+      .secondColumn{
+        align-self: center;
+        margin-top: 4vh;
+
+        .age{
+          font-size: $h1FontSizeMobile * 2;
+          line-height: $h1FontSizeMobile * 2;
+        }
+      }
+
+      @media only screen and (max-height: $maxHeihgtSmallDevices){
+        .firstColumn .title{
+          font-size: $h3FontSizeMobile;
+          line-height: $h3FontSizeMobile;
+          .name{
+            font-size: $h4FontSizeMobile;
+            line-height: $h4FontSizeMobile;
+          }
+        }
+        .secondColumn{
+          margin-top: 0;
+        }
+      }
+    }
   }
 }
