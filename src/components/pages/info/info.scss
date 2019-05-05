@@ -10,4 +10,9 @@
   span.accent{
     color: white;
   }
+  
+  @media only screen and (max-width: $maxWidthMobile) and (max-height: $maxHeihgtSmallDevices) {
+    font-size: $h2FontSizeMobile;
+    transform: none;
+  }
 }
