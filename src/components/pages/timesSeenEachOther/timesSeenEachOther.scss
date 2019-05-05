@@ -64,5 +64,65 @@
         }
       }
     }
+
+    @media only screen and (max-width: $maxWidthMobile){
+      flex-direction: column;
+      padding: 0;
+
+      .firstColumn{
+        padding: 0;
+        width: 100%;
+
+        .firstLine{
+          width: 100%;
+          padding: 0;
+          font-size: $h4FontSizeMobile;
+          line-height: $h4FontSizeMobile;
+        }
+
+        .secondLine {
+          padding: 0;
+          font-size: $h2FontSizeMobile;
+          line-height: $h2FontSizeMobile;
+        }
+      }
+
+      .secondColumn{
+        align-self: center;
+        width: auto;
+        padding: 16px 0;
+
+        .barOptions {
+          margin-top: 20px;
+          span {
+            font-size: $h4FontSizeMobile;
+            line-height: $h4FontSizeMobile;
+          }
+        }
+      }
+
+      @media only screen and (max-height: $maxHeihgtSmallDevices){
+        .firstColumn {
+          padding: 0;
+
+          .firstLine{
+            font-size: $h5FontSizeMobile;
+            line-height: $h5FontSizeMobile;
+          }
+          .secondLine {
+            font-size: $h3FontSizeMobile;
+            line-height: $h3FontSizeMobile;
+          }
+        }
+        .secondColumn {
+          padding: 16px 0;
+
+          .numberTimes {
+            font-size: $h1FontSize;
+            line-height: $h1FontSize;
+          }
+        }
+      }
+    }
   }
 }
