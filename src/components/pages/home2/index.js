@@ -1,4 +1,4 @@
-import React, {Component, Fragment} from "react";
+import React, {Component} from "react";
 import Logo from "../../utils/logo";
 import LogoChurch from "../../utils/logoChurch";
 import {ReactComponent as Arrow} from "../../../assets/images/arrow.svg";

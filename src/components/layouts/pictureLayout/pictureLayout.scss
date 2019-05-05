@@ -1,7 +1,6 @@
 @import "../../../theme";
 
 .pictureLayout{
-  $heightLayer: 75vh;
   background-size: cover;
   
   .topBar{
@@ -63,5 +62,21 @@
       
       min-height: calc(#{$heightLayer} - #{$heightLogoChurch} - #{$paddingLayout});
     }
-  }  
+  }
+
+  @media only screen and (max-width: 420px){
+    @media only screen and (max-height: 600px){
+      .gatinho::after{
+        height: $heightLayerSmallMobile;
+      }
+    }
+    
+    .bodyLayout{
+      align-self: unset;
+      
+      .bodyLayoutPicture{
+        padding: 0;
+      }
+    }
+  }
 }

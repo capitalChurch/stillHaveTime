@@ -16,13 +16,12 @@ export default class YourName extends React.Component{
     
     handleChangeName = name => this.setState({name}, () => saveMyName(name));
 
-    render = () =>
-        (
+    render = () => (
         <PictureLayout className="yourName" colorLayer="blue" bgImage={BackGround} nextPage={EnumRotas.YourAge}>
             <span>Qual é o<br/>seu nome?</span>
             <div className="form">
                 <InputText value={this.state.name} onChange={this.handleChangeName}/>
             </div>
         </PictureLayout>
-    )
+    );
 }

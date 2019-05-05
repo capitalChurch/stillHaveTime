@@ -11,10 +11,20 @@
     padding: 8px 16px;
     width: 420px;
     transform: translateY(80%);
+    border-radius: 0;
   }
   
   &.blue input[type=text]{
     background: $primaryColor;
     color: white;
+  }
+  
+  @media only screen and (max-width: 420px){
+    input[type=text]{
+      width: 50vw;
+      font-size: $h3FontSizeMobile;
+      transform: none;
+      padding: 8px;
+    }
   }
 }

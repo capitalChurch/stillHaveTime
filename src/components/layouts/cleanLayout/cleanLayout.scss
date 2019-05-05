@@ -1,15 +1,13 @@
 @import "../../../theme";
 
 .layoutClean{    
-  $sizePadding: 56px;
   
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 
-  height: calc(100% - #{$sizePadding * 2});
-  padding: $sizePadding;
-  
+  height: calc(100vh - #{$paddingLayout * 2});
+  padding: $paddingLayout;
   
   >*{
     display: flex;
@@ -34,5 +32,23 @@
   
   .footer{
     justify-content: flex-end;
+  }
+
+  @media only screen and (max-width: 420px){
+    padding: $paddingLayoutMobile;
+  
+    height: 86.4vh;//calc(100vh - #{$paddingLayoutMobile * 4} - 1vh);
+    justify-content: flex-start;
+    
+    .bodyLayout{
+      padding: $paddingLayoutMobile 0;
+
+      min-height: calc(100vh - #{($paddingLayoutMobile * 7)} - #{$heightLogoChurch} - #{$heightLogo});
+      
+      >*{
+        font-size: $h1FontSizeMobile;
+        line-height: $h1FontSizeMobile;
+      }
+    }
   }
 }

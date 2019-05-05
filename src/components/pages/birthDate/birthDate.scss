@@ -4,6 +4,10 @@
   .bodyLayout{
     font-family: $familySecundary;
     
+    span{
+      width: 100%;
+    }
+    
     .form{
       padding: 16px 0;
       input{
@@ -31,8 +35,26 @@
       span.slash::before{
         content: "/";
         font-family: $familySecundary;
-        font-size: 50px;
+        font-size: $h3FontSize;
+        vertical-align: text-bottom;
       }
     }
-  }
+    
+    @media only screen and (max-width: 420px){
+      .form{
+        input {
+          font-size: $h3FontSizeMobile;
+          padding: 0 8px;
+          width: 40px;
+
+          &:last-child{
+            width: 60px;
+          }
+        }
+        span.slash::before {
+          font-size: $h3FontSizeMobile;
+        }
+      }
+    }
+  }  
 }

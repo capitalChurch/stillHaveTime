@@ -14,7 +14,6 @@ export default function(props){
     return (
         <div className={`${props.className} layoutClean`} style={props.style}>
             <BackButton style={styleComponents}/>
-            {!!props.nextPage && !props.hideForward && (<ForwardButton nextPage={props.nextPage} style={styleComponents}/>)}
             {!!props.time && !!props.nextPage && ( <LoadBar time={props.time} page={props.nextPage}/> )}
             <div className="topBar">
                 <LogoChurch/>
@@ -23,6 +22,7 @@ export default function(props){
             <div className="bodyLayout">
                 {props.children}
             </div>
+            {!!props.nextPage && !props.hideForward && (<ForwardButton nextPage={props.nextPage} style={styleComponents}/>)}
             <div className="footer">
                 <Logo />
             </div>
