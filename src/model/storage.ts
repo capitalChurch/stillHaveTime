@@ -54,6 +54,9 @@ export const saveRegularTime = (type: EnumTypeRegularTime): void => updateProper
 export const saveTimesPerEachEncounter = (n: number): void => updatePropertie(t => t.timesSpend.timesPerEachEncounter = n);
 export const saveHoursWhenTogether = (n: number): void => updatePropertie(t => t.timesSpend.hoursWhenTogether = n);
 
+export const setAlreadyWatchTheVideo = () => sessionStorage.setItem("alreadyWatchedVideo", "true");
+export const getAlreadyWatchTheVideo = (): boolean => (sessionStorage.getItem("alreadyWatchedVideo") || "false") === "true";
+
 export const initializeStorage = <T>(callback: () => T | void): T | void => insertAllData({
    mySelf:{
        name: "",

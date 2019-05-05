@@ -12,19 +12,22 @@
     background: $accentColor;
   }
   
-  .wrapperBackButton .backButton.primary {
-    .text span{
-      color: white;
-    }
-    .icon .arrowBack polygon.cls-1 {
-      fill: $accentColor;
+  .wrapperBackButton, .wrapperForwardButton{
+    .backButton.accent, .forwardButton.accent{
+      .text span {
+        color: white;
+      }
+
+      .icon .arrowBack polygon.cls-1 {
+        fill: $accentColor;
+      }
     }
   }
 
   .bodyLayout{
     width: 50%;
     span{
-      width: 35%;
+      width: 43%;
       color: white;
       font-family: $familyPrimary;
       font-size: $h2FontSize;
@@ -44,6 +47,50 @@
         &:hover{
           fill: $accentLightColor;
         }
+      }
+    }
+  }
+  
+  &.hasVideo {
+    .bodyLayout {    
+      width: 100%;
+    }
+
+    video {
+      width: 60vw;
+      height: 100%;
+    }
+  }
+
+  
+  @media only screen and (max-width:$maxWidthMobile){
+    .wrapperForwardButton{
+      top: 75vh;
+    }
+    
+    .bodyLayout{
+      flex-direction: column;
+      width: auto;
+      span{
+        width: auto;
+        text-align: center;
+      }
+      svg{
+        padding-top: 40px;
+        position: unset;
+        right: unset;
+        transform: none;
+      }
+    }
+
+    &.hasVideo {
+      .bodyLayout {
+        width: 100%;
+      }
+
+      video {
+        width: 100%;
+        height: 100%;
       }
     }
   }

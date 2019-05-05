@@ -11,5 +11,13 @@
       font-size: $h1FontSize - $fontSize;
       line-height: $h1FontSize - $fontSize;
     }
+    
+    @media only screen and (max-width:$maxWidthMobile){
+      span{
+        font-size: $h1FontSizeMobile;
+        line-height: $h1FontSizeMobile;
+        text-align: center;
+      }
+    }
   }
 }
