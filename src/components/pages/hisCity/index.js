@@ -7,6 +7,7 @@ import "./hisCity.scss";
 import {getMyRelation, saveHisCity} from "../../../model/storage";
 import {EnumRotas} from "../../../model/types";
 import {formatBeautiful} from "../../../model/utils";
+import {changeRoute} from "../../../model/constants";
 
 export default class HisCity extends React.Component{
     state = {
@@ -27,7 +28,7 @@ export default class HisCity extends React.Component{
                     <span className="item">{age}</span>
                 </div>
                 <div className="secondColumn">
-                    <InputText value={this.state.city} color="blue" onChange={this.handleChange} />
+                    <InputText value={this.state.city} color="blue" onChange={this.handleChange} handleSubmit={() => changeRoute(this.props, EnumRotas.Relation)} />
                 </div>
             </PictureLayout>
         )

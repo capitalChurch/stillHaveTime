@@ -17,15 +17,12 @@ export default class YourName extends React.Component{
     componentWillMount = () => this.setState({name: getMySelf().name});
     
     handleChangeName = name => this.setState({name}, () => saveMyName(name));
-    
-    handleSubmit = () => changeRoute(this.props, EnumRotas.YourAge);
 
     render = () => (
         <PictureLayout className="yourName" colorLayer="blue" bgImage={BackGround} nextPage={EnumRotas.YourAge} btnForwardDisabled={!this.state.name}>
             <span>Qual é o<br/>seu nome?</span>
             <div className="form">
-                <InputText value={this.state.name} onChange={this.handleChangeName}
-                           handleSubmit={this.handleSubmit}/>
+                <InputText value={this.state.name} onChange={this.handleChangeName} handleSubmit={() => changeRoute(this.props, EnumRotas.YourAge)}/>
             </div>
         </PictureLayout>
     );

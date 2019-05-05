@@ -6,6 +6,7 @@ import "./yourCity.scss";
 import {getMySelf, saveMyCity} from "../../../model/storage";
 import {EnumRotas} from "../../../model/types";
 import {formatBeautiful} from "../../../model/utils";
+import {changeRoute} from "../../../model/constants";
 
 export default class YourAddress extends React.Component{
     state = {
@@ -15,7 +16,6 @@ export default class YourAddress extends React.Component{
     componentWillMount = () => this.setState({city: getMySelf().city});
 
     handleChange = city => this.setState({city}, () => saveMyCity(city));
-    
     
     render = () => {
         const {name, age} = getMySelf();
@@ -28,7 +28,7 @@ export default class YourAddress extends React.Component{
                     <span className="item">{age}</span>
                 </div>
                 <div className="secondColumn">
-                    <InputText value={this.state.city} onChange={this.handleChange} />
+                    <InputText value={this.state.city} onChange={this.handleChange} handleSubmit={() => changeRoute(this.props, EnumRotas.ThinkingInSomeOne)} />
                 </div>                     
             </PictureLayout>
         )

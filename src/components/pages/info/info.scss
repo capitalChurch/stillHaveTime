@@ -1,18 +1,23 @@
 @import "../../../theme";
 
-.info .bodyLayout .bodyLayoutPicture p{
+.info .bodyLayout {
+
+  align-self: center;
   
-  margin: 0;
-  color: $accentColor;
-  transform: translateY(10%);
-  text-align: center;
-  
-  span.accent{
-    color: white;
-  }
-  
-  @media only screen and (max-width: $maxWidthMobile) and (max-height: $maxHeihgtSmallDevices) {
-    font-size: $h2FontSizeMobile;
-    transform: none;
+  .bodyLayoutPicture p {
+
+    margin: 0;
+    color: $accentColor;
+    transform: translateY(10%);
+    text-align: center;
+
+    span.accent {
+      color: white;
+    }
+
+    @media only screen and (max-width: $maxWidthMobile) and (max-height: $maxHeihgtSmallDevices) {
+      font-size: $h2FontSizeMobile;
+      transform: none;
+    }
   }
 }

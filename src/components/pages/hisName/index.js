@@ -6,6 +6,7 @@ import BackGround from "../../../assets/images/background/name_color_bg.jpg";
 import "./hisName.scss";
 import {getMyRelation, saveHisName} from "../../../model/storage";
 import {EnumRotas} from "../../../model/types";
+import {changeRoute} from "../../../model/constants";
 
 export default class HisName extends React.Component{
     state ={
@@ -15,12 +16,12 @@ export default class HisName extends React.Component{
     componentWillMount = () => this.setState({name: getMyRelation().name});
     
     handleChange = name => this.setState({name}, () => saveHisName(name));
-    
+
     render = () => (
         <PictureLayout className="hisName" colorLayer="yellow" bgImage={BackGround} nextPage={EnumRotas.HisAge} btnForwardDisabled={!this.state.name}>
             <span>Qual é o nome<br/> dele(a)?</span>
             <div className="form">
-                <InputText value={this.state.name} color="blue" onChange={this.handleChange}/>
+                <InputText value={this.state.name} color="blue" onChange={this.handleChange} handleSubmit={() => changeRoute(this.props, EnumRotas.HisAge)}/>
             </div>
         </PictureLayout>
     );
