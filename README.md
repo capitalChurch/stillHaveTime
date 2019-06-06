@@ -3,6 +3,7 @@ Este é um site feito pela Igreja Capital
 
 ## Available Scripts
 
+para usar o projeto basta rodar o comando npm install e depois o comando npm start
 
 ### `npm start`
 
