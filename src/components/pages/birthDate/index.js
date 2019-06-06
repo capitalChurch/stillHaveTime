@@ -55,7 +55,7 @@ export default class BirthDate extends React.Component{
         const {day, month, year} = this.state.date;
         const l = val => padStart(val.toString(), 2);
         return(
-            <PictureLayout className="birthDate" bgImage={BirthDateBg} colorLayer="blue" nextPage={EnumRotas.PressPlay}>
+            <PictureLayout className="birthDate" bgImage={BirthDateBg} colorLayer="blue" nextPage={EnumRotas.YourName}>
                 <span>Qual é a sua <br/> data de nascimento?</span>
                 <div className="form">
                     <input type="number" value={l(day)} onKeyUp={this.handleChange("day")} onChange={this.handleChange("day")} />
