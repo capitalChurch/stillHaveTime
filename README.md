@@ -15,3 +15,7 @@ Para rodar o projeto na sua máquina basta rodar o comando: npm start
 Para publicar o projeto basta rodar o comando: npm run build
 Será criado uma pasta build, onde contem o projeto para ser publicado
 
+
+## Result
+
+To see the results of this project you can access: http://aindadatempo.igrejacapital.org.br/
