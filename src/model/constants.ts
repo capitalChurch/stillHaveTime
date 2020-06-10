@@ -72,7 +72,7 @@ export const allRoutes: Rotas[] = [
     { type: EnumRotas.RegularTimeTogether, path: "regularTimeTogether", component: RegularTimeTogether },
     { type: EnumRotas.TimesSeenEachOther, path: "timesSeenEachOther", component: TimesSeenEachOther },
     { type: EnumRotas.ThinkingInSomeOne, path: "thinkingInSomeOne", component: ThinkingInSomeOne },
-    { type: EnumRotas.PressPlay, path: "pressPlay", component: PressPlay },
+    //{ type: EnumRotas.PressPlay, path: "pressPlay", component: PressPlay },
     { type: EnumRotas.Calculates, path: "calculates", component: Calculates },
 ];
 
