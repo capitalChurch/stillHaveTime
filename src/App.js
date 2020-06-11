@@ -14,8 +14,9 @@ function renderRoute(route){
 
 function App() {
   const rotaPadrao = allRoutes.find(x => x.type === defaultRoute);
+  const isProduction = process.env.NODE_ENV === 'production';
   return (
-      <Router>
+      <Router basename={isProduction ? '/still-have-time' : ''}>
             <Switch>
                   {allRoutes.map(renderRoute)}
                   <Route component={rotaPadrao.component}/>
