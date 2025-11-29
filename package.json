@@ -1,6 +1,6 @@
 {
   "name": "still-have-time",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "dom-to-image": "^2.6.0",
